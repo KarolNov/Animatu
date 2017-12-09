@@ -1,0 +1,102 @@
+/*
+Kolory Animatu w przestrzeni RGBA
+#9f2067ff fioletowy
+#1b75bcff niebieski
+#009444ff zielony
+#ffde17ff żółty
+#f15a29ff pomarańczowy
+#ed1c24ff czerwony
+*/
+
+body{
+  overflow-x: hidden;
+}
+/* menu górne */
+.navbar{
+  background-color: #009444ff;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-top: 0;
+  padding-top: 10px;
+  /*-webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;*/
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+.navbar h3{
+    margin-top: 30px;
+}
+
+
+.menuText{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.active{
+
+}
+
+/* menu boczne */
+.wraper{
+  position: fixed;
+  right: 0;
+}
+
+#sidebar {
+        padding-top: 200px;
+        min-width: 250px;
+        max-width: 250px;
+        margin-right: -80px;
+        height: 100vh;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-name: toRight;
+        display: none;
+}
+
+#sidebar:hover {
+  animation-fill-mode: forwards;
+  animation-name: toLeft;
+}
+
+@keyframes toLeft{
+  from{ margin-right: -80px}
+  to{   margin-right: 0}
+}
+@keyframes toRight{
+  from{ margin-right: 0}
+  to{   margin-right: -80px}
+}
+
+
+#sidebar img{
+  margin-top: 50px;
+}
+
+#sidebar img:hover{
+  animation-name: rotateHover;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s, 0.3s;
+  display: inline;
+}
+
+@keyframes rotateHover{
+  from{ transform: rotate(0deg);}
+  to  { transform: rotate(-6deg);}
+}
+
+a{
+  color: #ffffff;
+}
+a:hover{
+  color: #ffffffcc;
+  text-decoration: none;
+}
+a:active{
+  color: #ffffffcc;
+  text-decoration: none;
+}
