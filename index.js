@@ -1,7 +1,18 @@
 
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
-
+    let d = new Date();
+    let m = d.getMonth();
+    snowStorm.followMouse = false;
+    if(m==11){
+      //IT'S CHRISTMASS
+      snowStorm.autoStart = true;
+      $('.navbar').css("background-color", "#ed1c24ff");
+    }else{
+      //it's not Xmass :(
+      snowStorm.autoStart = false;
+      $('.navbar').css("background-color", "#009444ff");
+    }
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -26,6 +37,12 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
+    if(scrollPos>300){
+      $('#menu').fadeOut(1000, "linear");
+    }
+    if(scrollPos<=300){
+      $('#menu').fadeIn(1000, "linear");
+    }
     $('#menu a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -86,10 +103,8 @@ function onScroll(event){
       //   $('img[src="./src/rezerwacja-a.png"]').attr("src", "./src/rezerwacja.png");
     }
     if($("#logo").hasClass("active")){
-      $('#menu').fadeIn(1000, "linear");
       $('#sidebar').fadeOut(1000, "linear");
     }else{
-      $('#menu').fadeOut(1000, "linear");
       $('#sidebar').fadeIn(1000, "linear");
     }
 }

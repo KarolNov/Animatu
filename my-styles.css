@@ -7,21 +7,25 @@ Kolory Animatu w przestrzeni RGBA
 #f15a29ff pomarańczowy
 #ed1c24ff czerwony
 */
+@font-face {
+    font-family: Ocra;
+    src: url(ocraextended.ttf);
+}
 
 body{
+  font-family: Ocra;
   overflow-x: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 /* menu górne */
 .navbar{
-  background-color: #009444ff;
   color: white;
   border-bottom: 1px solid white;
   margin-top: 0;
   padding-top: 10px;
-  /*-webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;*/
   animation-duration: 0.5s;
   opacity: 1;
 }
