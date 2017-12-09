@@ -7,6 +7,35 @@ Kolory Animatu w przestrzeni RGBA
 #f15a29ff pomarańczowy
 #ed1c24ff czerwony
 */
+
+/*ładowanie */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('http://i.stack.imgur.com/FhHRx.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+/*czcionka, body */
 @font-face {
     font-family: Ocra;
     src: url(ocraextended.ttf);
@@ -22,6 +51,7 @@ body{
 }
 /* menu górne */
 .navbar{
+  background-color: #009444ff;
   color: white;
   border-bottom: 1px solid white;
   margin-top: 0;
@@ -103,4 +133,18 @@ a:hover{
 a:active{
   color: #ffffffcc;
   text-decoration: none;
+}
+
+.firstImg{
+  width: 100%;
+  height: 100%;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-name: blurImg;
+}
+
+@keyframes blurImg{
+  from{ filter: blur(7px)}
+  to  { filter: blur(0px)}
 }

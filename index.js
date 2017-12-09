@@ -1,4 +1,13 @@
 
+//ładowanie
+
+$body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }
+});
+
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
     let d = new Date();
@@ -46,7 +55,7 @@ function onScroll(event){
     $('#menu a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && (refElement.position().top + refElement.height()) > (scrollPos)) {
+        if (refElement.position().top-100 <= scrollPos && (refElement.position().top-100 + refElement.height()) > (scrollPos)) {
             $('#menu ul a').removeClass("active");
             currLink.addClass("active");
         }
