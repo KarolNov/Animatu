@@ -22,6 +22,8 @@
 
   </head>
   <body class="loading">
+      <!-- Menu dla dużych i średnich wyświetlaczy -->
+      <div class="hidden-sm hidden-xs">
       <!-- Navbar górny -->
       <div class="container-fluid">
         <div class="navbar navbar-default navbar-fixed-top" id="menu">
@@ -34,22 +36,38 @@
             </div>
           </ul>
         </div>
-      </div>
-
       <!-- Navbar z boku -->
       <div class="wraper">
         <nav id="sidebar">
-          <a href="#uslugi"> <img src="./src/uslugi.png" width="300px" class="sideImg">          </img> <img src="./src/uslugi-a.png" width="300px" class="sideImg">          </img></a>
-          <a href="#zdjecia"> <img src="./src/zdjecia.png" width="300px" class="sideImg">        </img> <img src="./src/zdjecia-a.png" width="300px" class="sideImg">         </img></a>
-          <a href="#rezerwacja"> <img src="./src/rezerwacja.png" width="300px" class="sideImg">  </img> <img src="./src/rezerwacja-a.png" width="300px" class="sideImg">         </img></a>
-          <a href="#kontakt"> <img src="./src/kontakt.png" width="300px" class="sideImg">        </img> <img src="./src/kontakt-a.png" width="300px" class="sideImg">         </img></a>
+          <a href="#uslugi"> <img src="./src/uslugi.png" width="300px" class="sideImg">          </img> <img src="./src/uslugi-a.png" width="300px" style="display: none" class="sideImg">          </img></a>
+          <a href="#zdjecia"> <img src="./src/zdjecia.png" width="300px" class="sideImg">        </img> <img src="./src/zdjecia-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
+          <a href="#rezerwacja"> <img src="./src/rezerwacja.png" width="300px" class="sideImg">  </img> <img src="./src/rezerwacja-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
+          <a href="#kontakt"> <img src="./src/kontakt.png" width="300px" class="sideImg">        </img> <img src="./src/kontakt-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
 
         </nav>
       </div>
+    </div>
+    <!-- Menu dla małych wyświetlaczy -->
+    <div class="hidden-xl hidden-lg hidden-md">
+      <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top" id="mobMenu">
+          <ul class="nav navbar-nav">
+              <div class="menuText col-sm-12 col-xs-12"> <li> <a id="logoM"> <img src="./src/logo-biale.png" width="100px"> </img> <span class="caret"></span>
+              </a> </li> </div>
+              <div id="myNavbar">
+                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
+                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
+                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
+                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
+                </ul>
+              </div>
+              </div>
+            </nav>
+        </div>
+    </div>
 
     <div style="margin-top: 100px; width: 100vw; padding: 0; background-color: #ffffff"   id="top">
       <img src="./src/firstimg.jpg"  class="firstImg"> </img>
-      <!-- <div style="position: absolute; top:300px; left: 300px;"><h3>Bottom Left</h3></div> -->
     </div>
     <div style="height: 100vh; background-color: #9f2067ff" id="uslugi">
 

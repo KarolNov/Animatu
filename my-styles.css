@@ -57,6 +57,7 @@ body{
   padding-top: 10px;
   animation-duration: 0.5s;
   opacity: 1;
+  display: none;
 }
 
 .navbar h3{
@@ -77,6 +78,7 @@ body{
 .wraper{
   position: fixed;
   right: 0;
+  z-index: 1000;
 }
 
 #sidebar {
@@ -89,6 +91,7 @@ body{
         animation-fill-mode: forwards;
         animation-name: toRight;
         display: none;
+        z-index: 1000;
 }
 
 #sidebar:hover {
@@ -122,6 +125,13 @@ body{
   to  { transform: rotate(-6deg);}
 }
 
+#myNavbar{
+  display: none;
+}
+.mobMenu{
+  text-align: center;
+}
+
 a{
   color: #ffffff;
 }
@@ -138,7 +148,8 @@ a:active{
   width: 100%;
   height: 100%;
   filter: blur(7px);
-  animation-delay: 3s;
+  z-index: 1;
+  animation-delay: 4s;
   animation-duration: 6s;
   animation-fill-mode: forwards;
   animation-name: blurImg;
