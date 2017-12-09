@@ -14,12 +14,14 @@
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="my-styles.css">
+    <link rel="stylesheet" type="text/css" href="loading.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="snowstorm-min.js"> </script>
     <script src="index.js"> </script>
 
   </head>
-  <body>
+  <body class="loading">
       <!-- Navbar górny -->
       <div class="container-fluid">
         <div class="navbar navbar-default navbar-fixed-top" id="menu">
@@ -49,12 +51,18 @@
       <img src="./src/firstimg.jpg"  class="firstImg"> </img>
       <!-- <div style="position: absolute; top:300px; left: 300px;"><h3>Bottom Left</h3></div> -->
     </div>
-    <div style="height: 100vh; background-color: #9f2067ff" id="uslugi">     </div>
+    <div style="height: 100vh; background-color: #9f2067ff" id="uslugi">
+
+    </div>
     <div style="height: 100vh; background-color: #1b75bcff" id="zdjecia">    </div>
     <div style="height: 100vh; background-color: #f15a29ff" id="rezerwacja"> </div>
     <div style="height: 100vh; background-color: #ffde17ff" id="kontakt">    </div>
     <!-- ładowanie -->
-    <div class="modal"></div>
+    <div class="modal">
+      <svg class="logo" viewBox="0 0 595.3 841.9">
+      <use xlink:href="loading.svg#Logo"></use>
+      </svg>
+    </div>
 
 
 

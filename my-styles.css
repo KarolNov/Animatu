@@ -17,8 +17,7 @@ Kolory Animatu w przestrzeni RGBA
     left:       0;
     height:     100%;
     width:      100%;
-    background: rgba( 255, 255, 255, .8 )
-                url('http://i.stack.imgur.com/FhHRx.gif')
+    background: rgba( 255, 255, 255, 0.8)
                 50% 50%
                 no-repeat;
 }
@@ -51,7 +50,7 @@ body{
 }
 /* menu górne */
 .navbar{
-  background-color: #009444ff;
+  background-color: #00000000;
   color: white;
   border-bottom: 1px solid white;
   margin-top: 0;
@@ -138,6 +137,7 @@ a:active{
 .firstImg{
   width: 100%;
   height: 100%;
+  filter: blur(7px);
   animation-delay: 3s;
   animation-duration: 6s;
   animation-fill-mode: forwards;

@@ -1,14 +1,14 @@
 
 //ładowanie
 
-$body = $("body");
-
-$(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
-     ajaxStop: function() { $body.removeClass("loading"); }
-});
-
-$(document).ready(function () {
+// $body = $("body");
+//
+// $(document).on({
+//     ajaxStart: function() { $body.addClass("loading");    },
+//      ajaxStop: function() { $body.removeClass("loading"); }
+// });
+$(document).ready(setTimeout(function () {
+    $("body").removeClass("loading");
     $(document).on("scroll", onScroll);
     let d = new Date();
     let m = d.getMonth();
@@ -42,7 +42,7 @@ $(document).ready(function () {
             $(document).on("scroll", onScroll);
         });
     });
-});
+}, 5000));
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
