@@ -10,8 +10,23 @@
 $(document).ready(setTimeout(function () {
     //welcome screen
     $("body").removeClass("loading");
-    $("#menu").fadeIn(3000);
-    $("#mMenu").fadeIn(3000);
+    if($(window).width()<920){
+        $("#mMenu").fadeIn(3000);
+        $("#menu").fadeOut(3000);
+      }else{
+        $("#mMenu").fadeOut(3000);
+        $("#menu").fadeIn(3000);
+    }
+    $( window ).resize(function() {
+      if($(window).width() < 768){
+          $("#mMenu").fadeIn(3000);
+          $("#menu").fadeOut(3000);
+        }else{
+          $("#mMenu").fadeOut(3000);
+          $("#menu").fadeIn(3000);
+        }
+    });
+
     //scroll event
     $(document).on("scroll", onScroll);
     //śnieżek
