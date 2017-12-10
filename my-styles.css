@@ -49,7 +49,7 @@ body{
   transition: all 0.3s ease;
 }
 /* menu górne */
-.navbar{
+#menu{
   background-color: #00000000;
   color: white;
   border-bottom: 1px solid white;
@@ -63,6 +63,14 @@ body{
 .navbar h3{
     margin-top: 30px;
 }
+
+@media (max-width: 920px) {
+  .navbar h3{
+      font-size: 20px;
+      margin-top: 30px;
+  }
+}
+
 
 
 .menuText{
@@ -128,8 +136,19 @@ body{
 #myNavbar{
   display: none;
 }
-.mobMenu{
+
+#mMenu{
+  display: none;
+  height: 120px;
+  padding-top: 10px;
+}
+
+#mobMenu{
   text-align: center;
+  display: none;
+  height: 50px;
+  padding-top: 5px;
+  z-index: 9999;
 }
 
 a{
@@ -158,4 +177,9 @@ a:active{
 @keyframes blurImg{
   from{ filter: blur(7px)}
   to  { filter: blur(0px)}
+}
+
+.resForm{
+  margin-left: 20px;
+  margin-right: 20px;
 }

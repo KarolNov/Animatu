@@ -10,7 +10,8 @@
 $(document).ready(setTimeout(function () {
     //welcome screen
     $("body").removeClass("loading");
-    $(".navbar").fadeIn(3000);
+    $("#menu").fadeIn(3000);
+    $("#mMenu").fadeIn(3000);
     //scroll event
     $(document).on("scroll", onScroll);
     //śnieżek
@@ -59,16 +60,26 @@ function onScroll(event){
     var scrollPos = $(document).scrollTop();
     if(scrollPos>300){
       $('#menu').fadeOut(1000, "linear");
+    }else{
+      $('#menu').fadeIn(1000, "linear");
     }
     if(scrollPos>350){
       $('#sidebar').fadeIn(1000, "linear");
-    }
-    if(scrollPos<=350){
+    }else{
       $('#sidebar').fadeOut(1000, "linear");
     }
-    if(scrollPos<=300){
-      $('#menu').fadeIn(1000, "linear");
+    //mobilny scroll
+    if(scrollPos>70){
+      $('#mMenu').animate({height: "20px"}, { queue:false, duration:1000});
+    }else{
+      $('#mMenu').animate({height: "120px"}, { queue:false, duration:1000 });
     }
+    if(scrollPos>50){
+      $('#mobMenu').fadeIn(1000, "swing");
+    }else{
+      $('#mobMenu').fadeOut(1000, "swing");
+    }
+
     $('#menu a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));

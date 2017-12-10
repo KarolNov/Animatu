@@ -23,16 +23,16 @@
   </head>
   <body class="loading">
       <!-- Menu dla dużych i średnich wyświetlaczy -->
-      <div class="hidden-sm hidden-xs">
+      <div class="hidden-xs">
       <!-- Navbar górny -->
       <div class="container-fluid">
         <div class="navbar navbar-default navbar-fixed-top" id="menu">
           <ul class="list-inline">
-              <div class="menuText col-lg-2 col-md-2"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
-              <div class="menuText col-lg-4 col-md-4"> <li> <a href="#top" id="logo"> <img src="./src/logo-biale.png" width="100px"> </img> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
+              <div class="menuText col-lg-4 col-md-4 col-sm-4"> <li> <a href="#top" id="logo"> <img src="./src/logo-biale.png" width="100px"> </img> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
             </div>
           </ul>
         </div>
@@ -48,33 +48,75 @@
       </div>
     </div>
     <!-- Menu dla małych wyświetlaczy -->
-    <div class="hidden-xl hidden-lg hidden-md">
-      <div class="container-fluid">
-        <nav class="navbar navbar-default navbar-fixed-top" id="mobMenu">
-          <ul class="nav navbar-nav">
-              <div class="menuText col-sm-12 col-xs-12"> <li> <a id="logoM"> <img src="./src/logo-biale.png" width="100px"> </img> <span class="caret"></span>
-              </a> </li> </div>
-              <div id="myNavbar">
-                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
-                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
-                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
-                <div class="mobMenu col-sm-3 col-xs-6"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
-                </ul>
-              </div>
-              </div>
-            </nav>
-        </div>
+    <div class="hidden-xl hidden-lg hidden-md hidden-sm">
+        <!-- po zaczęciu przewijania -->
+        <div class="container-fluid">
+          <nav class="navbar navbar-default navbar-fixed-top" id="mobMenu">
+            <ul class="nav navbar-nav">
+                <div class="menuText col-sm-12 col-xs-2"> <li> <a id="logoM"> <span class="glyphicon glyphicon-list" style="font-size: 20px;"> </span>
+                </a> </li> </div>
+                <div id="myNavbar">
+                  <div class="mobMenu col-xs-12"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
+                  </ul>
+                </div>
+              </nav>
+          </div>
+          <!-- startowa wersja menu mobilnego -->
+          <div class="container-fluid">
+            <div class="navbar navbar-default navbar-fixed-top" id="mMenu">
+              <ul class="list-inline">
+                  <div class="menuText col-xs-12"> <li><img src="./src/logo-biale.png" width="100px"> </img></li> </div>
+                </div>
+              </ul>
+            </div>
     </div>
 
-    <div style="margin-top: 100px; width: 100vw; padding: 0; background-color: #ffffff"   id="top">
-      <img src="./src/firstimg.jpg"  class="firstImg"> </img>
+    <!-- Strona startowa -->
+    <div style="margin-top: auto; width: 100vw; padding: 0; background-color: #ffffff"   id="top">
+      <!-- zdjęcia dla większych urządzeń -->
+      <div class="hidden-xs"><img src="./src/firstimg.jpg"  class="firstImg"> </img></div>
+      <!-- zdjęcie dla telefonów -->
+      <div class="hidden-lg hidden-md hidden-sm"><img src="./src/firstimgMob.jpg"  class="firstImg"> </img></div>
+
     </div>
     <div style="height: 100vh; background-color: #9f2067ff" id="uslugi">
 
     </div>
-    <div style="height: 100vh; background-color: #1b75bcff" id="zdjecia">    </div>
-    <div style="height: 100vh; background-color: #f15a29ff" id="rezerwacja"> </div>
-    <div style="height: 100vh; background-color: #ffde17ff" id="kontakt">    </div>
+
+    <div style="height: 100vh; background-color: #1b75bcff" id="zdjecia">
+    </div>
+
+    <div style="height: 100vh; background-color: #f15a29ff" id="rezerwacja">
+
+    </div>
+
+    <div style="height: auto; width: 100%; background-color: #ffde17ff" id="kontakt">
+      <div class="contactForm">
+        <form id="contact">
+          <div class="form-group center-block">
+            <label for="inputName"> Imię i nazwisko </label>
+            <input type="text" class="form-control contact-input" id="inputName" placeholder="Imię i nazwisko" name="name">
+          </div>
+          <div class="form-group center-block">
+            <label for="inputEmail"> Email </label>
+            <input type="text" class="form-control contact-input" id="inputEmail" placeholder="Email" name="email">
+          </div>
+          <div class="form-group center-block">
+            <label for="inputMessage">Wiadomość</label>
+            <textarea id="inputMessage" class="form-control contact-input" style="resize: none;" rows="3" placeholder="Wiadomość" name="message"></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display: none;">
+          <div class="text-center">
+            <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
+              Wyślij
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- ładowanie -->
     <div class="modal">
       <svg class="logo" viewBox="0 0 595.3 841.9">
