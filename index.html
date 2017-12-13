@@ -14,12 +14,11 @@
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="my-styles.css">
-    <link rel="stylesheet" type="text/css" href="loading.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="snowstorm-min.js"> </script>
     <script src="index.js"> </script>
-
+    <script src=".\node_modules\vivus\dist\vivus.min.js"></script>
   </head>
   <body class="loading">
       <!-- Menu dla dużych i średnich wyświetlaczy -->
@@ -51,10 +50,11 @@
         <!-- po zaczęciu przewijania -->
         <div class="container-fluid">
           <nav class="navbar navbar-default navbar-fixed-top" id="mobMenu">
-            <ul class="nav navbar-nav">
-                <div class="menuText col-sm-12 col-xs-2"> <li> <a id="logoM"> <span class="glyphicon glyphicon-list" style="font-size: 20px;"> </span>
-                </a> </li> </div>
+                <div class="navbar-header">
+                <div class="menuText col-xs-2"> <a id="logoM"> <span class="glyphicon glyphicon-list" style="font-size: 20px; padding-top: 10px;"> </span>
+                </a> </div> </div>
                 <div id="myNavbar">
+                  <ul class="nav navbar-nav">
                   <div class="mobMenu col-xs-12"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
                   <div class="mobMenu col-xs-12"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
                   <div class="mobMenu col-xs-12"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
@@ -64,8 +64,8 @@
               </nav>
           </div>
           <!-- startowa wersja menu mobilnego -->
-          <div class="container-fluid">
-            <div class="navbar navbar-default navbar-fixed-top" id="mMenu">
+          <div class="container-fluid" style="padding: 0 0 0 0;">
+            <div class="navbar navbar-default" id="mMenu">
               <ul class="list-inline">
                   <div class="menuText col-xs-12"> <li><img src="./src/logo-biale.png" width="100px"> </img></li> </div>
                 </div>
@@ -117,12 +117,14 @@
       </div>
     </div>
     <!-- ładowanie -->
-    <div class="modal">
-      <svg class="logo" viewBox="0 0 595.3 841.9">
-      <use xlink:href="loading.svg#Logo"></use>
-      </svg>
-    </div>
+    <div class="modal" id="load">
 
+    </div>
+    <script>
+      new Vivus('load', {duration: 60, file: 'loading.svg'}, ()=>{
+        $('#load').fadeOut(500);
+      });
+    </script>
 
 
   </body>

@@ -7,6 +7,7 @@
 //     ajaxStart: function() { $body.addClass("loading");    },
 //      ajaxStop: function() { $body.removeClass("loading"); }
 // });
+
 $(document).ready(setTimeout(function () {
     //welcome screen
     $("body").removeClass("loading");
@@ -29,6 +30,10 @@ $(document).ready(setTimeout(function () {
 
     //scroll event
     $(document).on("scroll", onScroll);
+    //mobile menu toggle off
+    $('#mobMenu').mouseleave(()=>{
+      $('#myNavbar').slideUp(1000);
+    });
     //śnieżek
     let d = new Date();
     let m = d.getMonth();
@@ -69,7 +74,7 @@ $(document).ready(setTimeout(function () {
             $(document).on("scroll", onScroll);
         });
     });
-}, 5000));
+}, 2000));
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
@@ -84,14 +89,9 @@ function onScroll(event){
       $('#sidebar').fadeOut(1000, "linear");
     }
     //mobilny scroll
-    if(scrollPos>70){
-      $('#mMenu').animate({height: "20px"}, { queue:false, duration:1000});
-    }else{
-      $('#mMenu').animate({height: "120px"}, { queue:false, duration:1000 });
-    }
-    if(scrollPos>50){
+    if(scrollPos>100){
       $('#mobMenu').fadeIn(1000, "swing");
-    }else{
+    }else if(scrollPos<100){
       $('#mobMenu').fadeOut(1000, "swing");
     }
 

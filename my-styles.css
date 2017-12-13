@@ -79,7 +79,13 @@ body{
 }
 
 .active{
-
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: Underline;
+}
+@keyframes Underline{
+  from{ text-decoration: none;    }
+  to{   text-decoration: underline;}
 }
 
 /* menu boczne */
@@ -140,13 +146,14 @@ body{
 #mMenu{
   display: none;
   height: 120px;
+  width: 100%;
   padding-top: 10px;
+  margin: 0 0 0 0;
 }
 
 #mobMenu{
   text-align: center;
   display: none;
-  height: 50px;
   padding-top: 5px;
   z-index: 9999;
 }
@@ -168,8 +175,8 @@ a:active{
   height: 100%;
   filter: blur(7px);
   z-index: 1;
-  animation-delay: 4s;
-  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: blurImg;
 }
