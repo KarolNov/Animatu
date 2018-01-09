@@ -113,7 +113,7 @@ function onScroll(event){
 
     switch($(".active").attr("href")){
       case "#uslugi":
-        window.location.href = "#uslugi";
+        window.location.hash = "#uslugi";
         $('img[src="./src/polygon-zo.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
         $('img[src="./src/polygon-z3.png"]').fadeOut(0);
@@ -124,7 +124,7 @@ function onScroll(event){
         $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
       case "#onas":
-        window.location.href = "#onas";
+        window.location.hash = "#onas";
         $('img[src="./src/polygon-f.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
         $('img[src="./src/polygon-z3.png"]').fadeOut(0);
@@ -135,7 +135,7 @@ function onScroll(event){
         $('img[src="./src/polygon-n.png"]').fadeIn(500);
         break;
       case "#kontakt":
-        window.location.href = "#kontakt";
+        window.location.hash = "#kontakt";
         $('img[src="./src/polygon-n.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
@@ -146,7 +146,7 @@ function onScroll(event){
         $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
       case "#wyjazdy":
-        window.location.href = "#wyjazdy";
+        window.location.hash = "#wyjazdy";
         $('img[src="./src/polygon-p.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
