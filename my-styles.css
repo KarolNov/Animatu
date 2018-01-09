@@ -42,12 +42,35 @@ body.loading .modal {
 
 body{
   font-family: Ocra;
-  overflow-x: hidden;
+  color: white;
+  overflow: hidden;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+.arrow-bot{
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 50px;
+  bottom:0;
+  transform: rotate(90deg);
+  margin: auto;
+  z-index: 9999;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-name: pulseArrow;
+}
+
+@keyframes pulseArrow {
+  0%{   width: 200px;}
+  100%{ width: 100px;}
+
+}
+
 /* menu górne */
 #menu{
   background-color: #00000000;
@@ -71,6 +94,16 @@ body{
   }
 }
 
+.textCon {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.text {
+    position: absolute;
+    top: 58px;
+    left: 12px;
+}
 
 
 .menuText{
@@ -127,16 +160,25 @@ body{
   margin-top: 50px;
 }
 
-#sidebar img:hover{
+#sidebar .textCon:hover img{
   animation-name: rotateHover;
   animation-fill-mode: forwards;
   animation-duration: 0.5s, 0.3s;
   display: inline;
 }
-
+#sidebar .textCon:hover > .text{
+  animation-name: rotateHover, textSlide;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s, 0.3s;
+  display: inline;
+}
 @keyframes rotateHover{
   from{ transform: rotate(0deg);}
   to  { transform: rotate(-6deg);}
+}
+@keyframes textSlide{
+  from{ top: 58px;}
+  to  { top: 68px;}
 }
 
 #myNavbar{
@@ -179,6 +221,7 @@ a:active{
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: blurImg;
+  position: relative;
 }
 
 @keyframes blurImg{
@@ -186,7 +229,32 @@ a:active{
   to  { filter: blur(0px)}
 }
 
-.resForm{
-  margin-left: 20px;
-  margin-right: 20px;
+#uslugi h3{
+  color: white;
+  text-align: center;
+
+}
+#uslugi span{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#uslugi div:hover > span{
+  animation-name: spanBorder;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  border-bottom: 0px solid white;
+
+}
+
+@keyframes spanBorder{
+  from{ border-bottom-width: 0px;}
+  to{ border-bottom-width: 2px;;}
+}
+
+.contactForm{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
 }

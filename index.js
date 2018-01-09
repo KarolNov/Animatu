@@ -34,17 +34,13 @@ $(document).ready(setTimeout(function () {
     $('#mobMenu').mouseleave(()=>{
       $('#myNavbar').slideUp(1000);
     });
-    //śnieżek
     let d = new Date();
     let m = d.getMonth();
-    snowStorm.followMouse = false;
     if(m==11){
       //IT'S CHRISTMASS
-      snowStorm.autoStart = true;
       $('.navbar').css("background-color", "#ed1c24ff");
     }else{
       //it's not Xmass :(
-      snowStorm.autoStart = false;
       $('.navbar').css("background-color", "#009444ff");
     }
     $("#logoM").click(function(){
@@ -73,6 +69,14 @@ $(document).ready(setTimeout(function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
+    });
+
+    //Usługi
+    $('#dzieci').click(()=>{
+      console.log("dzieci");
+      $('#dorosli').slideDown(()=>{
+        $('#eventy').slideDown();
+      });
     });
 }, 2000));
 
@@ -109,50 +113,51 @@ function onScroll(event){
 
     switch($(".active").attr("href")){
       case "#uslugi":
-        $('img[src="./src/uslugi.png"]').fadeOut(0);
-        $('img[src="./src/uslugi-a.png"]').fadeIn(500);
-        $('img[src="./src/zdjecia.png"]').fadeIn(500);
-        $('img[src="./src/zdjecia-a.png"]').fadeOut(0);
-        $('img[src="./src/kontakt-a.png"]').fadeOut(0);
-        $('img[src="./src/kontakt.png"]').fadeIn(500);
-        $('img[src="./src/rezerwacja-a.png"]').fadeOut(0);
-        $('img[src="./src/rezerwacja.png"]').fadeIn(500);
+        window.location.href = "#uslugi";
+        $('img[src="./src/polygon-zo.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z1.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z3.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z4.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z2.png"]').fadeIn(500);
+        $('img[src="./src/polygon-p.png"]').fadeIn(500);
+        $('img[src="./src/polygon-n.png"]').fadeIn(500);
+        $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
-      case "#zdjecia":
-        $('img[src="./src/uslugi-a.png"]').fadeOut(0);
-        $('img[src="./src/uslugi.png"]').fadeIn(500);
-        $('img[src="./src/zdjecia.png"]').fadeOut(0);
-        $('img[src="./src/zdjecia-a.png"]').fadeIn(500);
-        $('img[src="./src/kontakt-a.png"]').fadeOut(0);
-        $('img[src="./src/kontakt.png"]').fadeIn(500);
-        $('img[src="./src/rezerwacja-a.png"]').fadeOut(0);
-        $('img[src="./src/rezerwacja.png"]').fadeIn(500);
+      case "#onas":
+        window.location.href = "#onas";
+        $('img[src="./src/polygon-f.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z2.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z3.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z4.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z1.png"]').fadeIn(500);
+        $('img[src="./src/polygon-p.png"]').fadeIn(500);
+        $('img[src="./src/polygon-zo.png"]').fadeIn(500);
+        $('img[src="./src/polygon-n.png"]').fadeIn(500);
         break;
       case "#kontakt":
-        $('img[src="./src/uslugi-a.png"]').fadeOut(0);
-        $('img[src="./src/uslugi.png"]').fadeIn(500);
-        $('img[src="./src/zdjecia-a.png"]').fadeOut(0);
-        $('img[src="./src/zdjecia.png"]').fadeIn(500);
-        $('img[src="./src/kontakt.png"]').fadeOut(0);
-        $('img[src="./src/kontakt-a.png"]').fadeIn(500);
-        $('img[src="./src/rezerwacja-a.png"]').fadeOut(0);
-        $('img[src="./src/rezerwacja.png"]').fadeIn(500);
+        window.location.href = "#kontakt";
+        $('img[src="./src/polygon-n.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z2.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z1.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z3.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z4.png"]').fadeIn(500);
+        $('img[src="./src/polygon-p.png"]').fadeIn(500);
+        $('img[src="./src/polygon-zo.png"]').fadeIn(500);
+        $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
-      case "#rezerwacja":
-        $('img[src="./src/uslugi-a.png"]').fadeOut(0);
-        $('img[src="./src/uslugi.png"]').fadeIn(500);
-        $('img[src="./src/zdjecia-a.png"]').fadeOut(0);
-        $('img[src="./src/zdjecia.png"]').fadeIn(500);
-        $('img[src="./src/kontakt-a.png"]').fadeOut(0);
-        $('img[src="./src/kontakt.png"]').fadeIn(500);
-        $('img[src="./src/rezerwacja.png"]').fadeOut(0);
-        $('img[src="./src/rezerwacja-a.png"]').fadeIn(500);
+      case "#wyjazdy":
+        window.location.href = "#wyjazdy";
+        $('img[src="./src/polygon-p.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z1.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z2.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z4.png"]').fadeOut(0);
+        $('img[src="./src/polygon-z3.png"]').fadeIn(500);
+        $('img[src="./src/polygon-n.png"]').fadeIn(500);
+        $('img[src="./src/polygon-zo.png"]').fadeIn(500);
+        $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
-      // default:
-      //   $('img[src="./src/uslugi-a.png"]').attr("src", "./src/uslugi.png");
-      //   $('img[src="./src/zdjecia-a.png"]').attr("src", "./src/zdjecia.png");
-      //   $('img[src="./src/kontakt-a.png"]').attr("src", "./src/kontakt.png");
-      //   $('img[src="./src/rezerwacja-a.png"]').attr("src", "./src/rezerwacja.png");
+      default:
+
     }
 
 }

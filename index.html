@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="my-styles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="snowstorm-min.js"> </script>
     <script src="index.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.3/vivus.min.js"></script>
   </head>
@@ -27,21 +26,37 @@
       <div class="container-fluid">
         <div class="navbar navbar-default navbar-fixed-top" id="menu">
           <ul class="list-inline">
-              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#onas">     <h3> O nas     </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#uslugi">   <h3> Usługi    </h3> </a> </li> </div>
               <div class="menuText col-lg-4 col-md-4 col-sm-4"> <li> <a href="#top" id="logo"> <img src="./src/logo-biale.png" width="100px"> </img> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
-              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#wyjazdy">  <h3> Wyjazdy </h3> </a> </li> </div>
+              <div class="menuText col-lg-2 col-md-2 col-sm-2"> <li> <a href="#kontakt">  <h3> Kontakt    </h3> </a> </li> </div>
           </ul>
         </div>
       </div>
       <!-- Navbar z boku -->
       <div class="wraper">
         <nav id="sidebar">
-          <a href="#uslugi"> <img src="./src/uslugi.png" width="300px" class="sideImg">          </img> <img src="./src/uslugi-a.png" width="300px" style="display: none" class="sideImg">          </img></a>
-          <a href="#zdjecia"> <img src="./src/zdjecia.png" width="300px" class="sideImg">        </img> <img src="./src/zdjecia-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
-          <a href="#rezerwacja"> <img src="./src/rezerwacja.png" width="300px" class="sideImg">  </img> <img src="./src/rezerwacja-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
-          <a href="#kontakt"> <img src="./src/kontakt.png" width="300px" class="sideImg">        </img> <img src="./src/kontakt-a.png" width="300px" style="display: none" class="sideImg">         </img></a>
+          <div class="textCon">
+            <a href="#top">  <img src="./src/polygon-c.png" width="300px" class"sideImg">           </img> </a>
+            <div class="text"> Strona główna </div>
+          </div>
+          <div class="textCon">
+            <a href="#onas"> <img src="./src/polygon-f.png" width="300px" class="sideImg">          </img> <img src="./src/polygon-z1.png" width="300px" style="display: none" class="sideImg">          </img></a>
+            <div class="text"> O nas</div>
+          </div>
+          <div class="textCon">
+            <a href="#uslugi"> <img src="./src/polygon-zo.png" width="300px" class="sideImg">        </img> <img src="./src/polygon-z2.png" width="300px" style="display: none" class="sideImg">         </img></a>
+            <div class="text"> Usługi </div>
+          </div>
+          <div class="textCon">
+            <a href="#wyjazdy"> <img src="./src/polygon-p.png" width="300px" class="sideImg">       </img> <img src="./src/polygon-z3.png" width="300px" style="display: none" class="sideImg">         </img></a>
+            <div class="text"> Wyjazdy </div>
+          </div>
+          <div class="textCon">
+            <a href="#kontakt"> <img src="./src/polygon-n.png" width="300px" class="sideImg">      </img> <img src="./src/polygon-z4.png" width="300px" style="display: none" class="sideImg">         </img></a>
+            <div class="text"> Kontakt </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -55,9 +70,9 @@
                 </a> </div> </div>
                 <div id="myNavbar">
                   <ul class="nav navbar-nav">
-                  <div class="mobMenu col-xs-12"> <li> <a href="#uslugi">     <h3> Usługi     </h3> </a> </li> </div>
-                  <div class="mobMenu col-xs-12"> <li> <a href="#zdjecia">    <h3> Zdjęcia    </h3> </a> </li> </div>
-                  <div class="mobMenu col-xs-12"> <li> <a href="#rezerwacja"> <h3> Rezerwacja </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#onas">     <h3> O nas     </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#uslugi">    <h3> Usługi    </h3> </a> </li> </div>
+                  <div class="mobMenu col-xs-12"> <li> <a href="#wyjazdy"> <h3> Wyjazdy </h3> </a> </li> </div>
                   <div class="mobMenu col-xs-12"> <li> <a href="#kontakt">    <h3> Kontakt    </h3> </a> </li> </div>
                   </ul>
                 </div>
@@ -79,22 +94,34 @@
       <div class="hidden-xs"><img src="./src/firstimg.jpg"  class="firstImg"> </img></div>
       <!-- zdjęcie dla telefonów -->
       <div class="hidden-lg hidden-md hidden-sm"><img src="./src/firstimgMob.jpg"  class="firstImg"> </img></div>
-
-    </div>
-    <div style="height: 100vh; background-color: #9f2067ff" id="uslugi">
-
+      <a href="#onas"> <img src="src/arrow.png" class="arrow-bot"> </img> </a>
     </div>
 
-    <div style="height: 100vh; background-color: #1b75bcff" id="zdjecia">
-    </div>
-
-    <div style="height: 100vh; background-color: #f15a29ff" id="rezerwacja">
+    <div style="height: 100vh; background-color: #9f2067ff" id="onas">
 
     </div>
+    <!-- Usługi -->
+    <div style="height: 100vh; background-color: #ffde17ff" id="uslugi">
+        <div style="height: 33.3vh; line-height: 33.3vh; padding-left: 15px; background-color: #ffe44dff" id="dzieci">
+          <span> <h3> DLA DZIECI </h3> </span>
+        </div>
+        <div style="height: 33.3vh; line-height: 33.3vh; padding-left: 15px; background-color: #f47e57ff" id="dorosli">
+          <span> <h3> DLA DOROSŁYCH </h3> </span>
+        </div>
+        <div style="height: 33.4vh; line-height: 33.4vh; padding-left: 15px; background-color: #f04248ff" id="eventy">
+          <span> <h3> ORGANIZACJA EVENTÓW </h3> </span>
+        </div>
+    </div>
 
-    <div style="height: auto; width: 100%; background-color: #ffde17ff" id="kontakt">
+    <div style="height: 100vh; background-color: #f15a29ff" id="wyjazdy">
+
+    </div>
+
+    <div style="height: 100vh; width: 100%; background-color: #1b75bcff" id="kontakt">
       <div class="contactForm">
-        <form id="contact">
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffff33&amp;src=msaduo8879120p4bmlidl517ck%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FWarsaw" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>        <form id="contact">
+      </div>
+      <div class="contactForm">
           <div class="form-group center-block">
             <label for="inputName"> Imię i nazwisko </label>
             <input type="text" class="form-control contact-input" id="inputName" placeholder="Imię i nazwisko" name="name">
