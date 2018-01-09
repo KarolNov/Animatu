@@ -72,11 +72,18 @@ $(document).ready(setTimeout(function () {
     });
 
     //Usługi
-    $('#dzieci').click(()=>{
+    var dzieci = '#dzieci';
+    $dzieci = $(dzieci);
+    $dzieci.click(()=>{
       console.log("dzieci");
-      $('#dorosli').slideDown(()=>{
-        $('#eventy').slideDown();
+      $dzieci.animate({
+        height: "100vh"
+      }, 2000, ()=>{
+        $('#dorosli').hide();
+        $('#eventy').hide();
+        $('#dzieci>span').hide();
       });
+
     });
 }, 2000));
 
