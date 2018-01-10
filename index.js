@@ -43,12 +43,20 @@ $(document).ready(setTimeout(function () {
       //it's not Xmass :(
       $('.navbar').css("background-color", "#009444ff");
     }
-    $("#logoM").click(function(){
+    $("#logoM").click(()=>{
       if($('#myNavbar').css("display")=="none"){
-      $('#myNavbar').slideDown(1000);
-    }else{
-      $('#myNavbar').slideUp(1000);
-    }
+        $('#myNavbar').slideDown(1000);
+      }else{
+        $('#myNavbar').slideUp(1000);
+      }
+    });
+
+    $('#myNavbar a').click(()=>{
+      if($('#myNavbar').css("display")=="none"){
+        $('#myNavbar').slideDown(1000);
+      }else{
+        $('#myNavbar').slideUp(1000);
+      }
     });
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
