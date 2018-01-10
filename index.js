@@ -72,19 +72,7 @@ $(document).ready(setTimeout(function () {
     });
 
     //Usługi
-    var dzieci = '#dzieci';
-    $dzieci = $(dzieci);
-    $dzieci.click(()=>{
-      console.log("dzieci");
-      $dzieci.animate({
-        height: "100vh"
-      }, 2000, ()=>{
-        $('#dorosli').hide();
-        $('#eventy').hide();
-        $('#dzieci>span').hide();
-      });
-
-    });
+    stretchOnClick();
 }, 2000));
 
 function onScroll(event){
@@ -167,4 +155,92 @@ function onScroll(event){
 
     }
 
+}
+
+//funkcja rozciągająca target na 90 vh, a zmniejszająca pozostałe 2 elementy na 5vh
+function stretchOnClick(){
+  var dzieci  = '#dzieci';
+  var dorosli = '#dorosli';
+  var eventy  = '#eventy';
+  $dzieci  = $(dzieci);
+  $dorosli = $(dorosli);
+  $eventy  = $(eventy);
+  $dzieci.click(()=>{
+    $dorosli.children().hide();
+    $eventy.children().hide();
+    $dzieci.animate({
+      height: "90vh"
+    }, 2000);
+    $dorosli.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $eventy.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $('#dorosli>span').show();
+    $('#dorosli>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#eventy>span').show();
+    $('#eventy>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#dzieci>span').hide();
+  });
+  $dorosli.click(()=>{
+    $dzieci.children().hide();
+    $eventy.children().hide();
+    $dorosli.animate({
+      height: "90vh"
+    }, 2000);
+    $dzieci.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $eventy.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $('#dzieci>span').show();
+    $('#dzieci>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#eventy>span').show();
+    $('#eventy>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#dorosli>span').hide();
+  });
+  $eventy.click(()=>{
+    $dzieci.children().hide();
+    $dorosli.children().hide();
+    $eventy.animate({
+      height: "90vh"
+    }, 2000);
+    $dorosli.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $dzieci.animate({
+      height: "5vh",
+      'line-height': "1vh"
+    }, 2000);
+    $('#dorosli>span').show();
+    $('#dorosli>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#dzieci>span').show();
+    $('#dzieci>span>h3').animate({
+      'font-size': '2vh',
+      'margin-top': '5px'
+    }, 0);
+    $('#eventy>span').hide();
+  });
 }
