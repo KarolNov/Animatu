@@ -283,6 +283,16 @@ a:active{
   border: 1px solid white;
 }
 
+#tresc li{
+  display: inline-block;
+  line-height: 200%;
+  width: 500px;
+  list-style-type:none;
+  background-image:url(src/kolkoAnimatu.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: left;
+}
 .contactForm{
   width: 70%;
   margin: 0 auto;
