@@ -97,14 +97,68 @@
       <a href="#onas"> <img src="src/arrow.png" class="arrow-bot"> </img> </a>
     </div>
 
-    <div style="height: 100vh; background-color: #9f2067ff" id="onas">
-
+    <!-- o nas -->
+    <div style="height: auto; width: 100vw; background-color: #9f2067ff; padding: 30px 5vh 30px 5vh;" id="onas">
+        <div class="avoidSidebar">
+          <img src="src/logo-biale.png" style="width: 200px;"> </img>
+          <h3>
+            Animatu to przede wszystkim grupa profesjonalistów, którzy uwielbiają dobrą zabawę i nie boją się wyzwań.
+            Animacja to dla nas coś więcej niż tylko praca, to sposób życia i myślenia.
+            Wszyscy nasi animatorzy swoje doświadczenia czerpią z harcerskiej pracy, jednocześnie mamy w swoich szeregach instruktorów,
+            pedagogów oraz specjalistów do spraw organizacji.
+          </h3>
+          <img src="src/magda.jpg" style="border-radius: 50%; width: 200px;"> </img>
+          <h2> Madzia Szwarcbach </h2>
+          <h3>
+          Założycielka firmy animacyjnej Animatu, z wykształcenia pedagog przedszkolny i wczesnoszkolny.
+          Instruktor ZHP, działa głownie w pionie zuchowym. Animacją czasu dla dzieci zajmuje się od 3 lat.
+          Prywatnie miłośniczka psów, zwłaszcza springerów, w wolnych chwilach lubi przemeblowywać mieszkanie.
+          </h3>
+        </div>
+      </div>
     </div>
-    
+
     <!-- Usługi -->
     <div style="height: 100vh; background-color: #ffe44dff" id="uslugi">
         <div style="height: 33.3vh; line-height: 33.3vh; padding-left: 15px; background-color: #ffe44dff" id="dzieci">
           <span> <h3> DLA DZIECI </h3> </span>
+          <div class="avoidSidebar" id="tresc">
+            <h4> Urodziny to bardzo wyjątkowa sprawa dla każdego młodego człowieka, dlatego w tej sprawie jesteśmy otwarci na potrzeby dzieci.
+            </h4>
+            <!-- Tematy urodzin -->
+            <div class="row-fluid">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <h4> Indiańska wioska </h4>
+                Indiańskie podchody </br>
+                Zdobywanie pióropuszy </br>
+                Legendy plemienne
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <h4> SurvivaLOVE </h4>
+                Balonowa bitwa </br>
+                Budowanie szałasu </br>
+                Zabawy z kompasem i mapą
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <h4> Chemia od kuchnii </h4>
+                Doświadczenia z produktami używanymi w kuchni </br>
+                Pokaz substancji chemicznych </br>
+                Zabawa z ciekawostkami o świecie fizyki i przyrody
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+              </div>
+            </div>
+          </div>
         </div>
         <div style="height: 33.3vh; line-height: 33.3vh; padding-left: 15px; background-color: #f47e57ff" id="dorosli">
           <span> <h3> DLA DOROSŁYCH </h3> </span>
@@ -118,31 +172,32 @@
 
     </div>
 
-    <div style="height: 100vh; width: 100%; background-color: #1b75bcff" id="kontakt">
-      <div class="contactForm">
+    <div style="height: auto; width: 100%; background-color: #1b75bcff padding-top: 30px;" id="kontakt">
+      <div class="avoidSidebar">
         <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffff33&amp;src=msaduo8879120p4bmlidl517ck%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FWarsaw" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>        <form id="contact">
+        <div class="contactForm">
+            <div class="form-group center-block">
+              <label for="inputName"> Imię i nazwisko </label>
+              <input type="text" class="form-control contact-input" id="inputName" placeholder="Imię i nazwisko" name="name">
+            </div>
+            <div class="form-group center-block">
+              <label for="inputEmail"> Email </label>
+              <input type="text" class="form-control contact-input" id="inputEmail" placeholder="Email" name="email">
+            </div>
+            <div class="form-group center-block">
+              <label for="inputMessage">Wiadomość</label>
+              <textarea id="inputMessage" class="form-control contact-input" style="resize: none;" rows="3" placeholder="Wiadomość" name="message"></textarea>
+            </div>
+            <input type="text" name="_gotcha" style="display: none;">
+            <div class="text-center">
+              <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
+                Wyślij
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="contactForm">
-          <div class="form-group center-block">
-            <label for="inputName"> Imię i nazwisko </label>
-            <input type="text" class="form-control contact-input" id="inputName" placeholder="Imię i nazwisko" name="name">
-          </div>
-          <div class="form-group center-block">
-            <label for="inputEmail"> Email </label>
-            <input type="text" class="form-control contact-input" id="inputEmail" placeholder="Email" name="email">
-          </div>
-          <div class="form-group center-block">
-            <label for="inputMessage">Wiadomość</label>
-            <textarea id="inputMessage" class="form-control contact-input" style="resize: none;" rows="3" placeholder="Wiadomość" name="message"></textarea>
-          </div>
-          <input type="text" name="_gotcha" style="display: none;">
-          <div class="text-center">
-            <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
-              Wyślij
-            </button>
-          </div>
-        </form>
-      </div>
+
     </div>
     <!-- ładowanie -->
     <div class="modal" id="load">

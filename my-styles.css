@@ -132,7 +132,7 @@ body{
         padding-top: 10vh;
         min-width: 250px;
         max-width: 250px;
-        margin-right: -80px;
+        margin-right: -240px;
         height: 100vh;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
@@ -147,12 +147,12 @@ body{
 }
 
 @keyframes toLeft{
-  from{ margin-right: -80px}
+  from{ margin-right: -240px}
   to{   margin-right: 0}
 }
 @keyframes toRight{
   from{ margin-right: 0}
-  to{   margin-right: -80px}
+  to{   margin-right: -240px}
 }
 
 
@@ -229,6 +229,17 @@ a:active{
   to  { filter: blur(0px)}
 }
 
+.avoidSidebar{
+  position: relative;
+  text-align: center;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto 220px auto auto;
+}
+
+#onas h2{
+  font-size: 36px;
+}
+
 #uslugi h3{
   color: white;
   text-align: center;
@@ -257,4 +268,10 @@ a:active{
   width: 70%;
   margin: 0 auto;
   padding-top: 20px;
+  align-items:  center;
+  position:  relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50vw;
 }
