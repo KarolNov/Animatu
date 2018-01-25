@@ -176,8 +176,11 @@ function stretchOnClick(){
   $dzieci.click(()=>{
     $dorosli.children().hide();
     $eventy.children().hide();
-    $dzieci.animate({
-      height: "90vh"
+    var curH  = $dzieci.height(),
+        autoH = $dzieci.css('height', 'auto').height();
+
+    $dzieci.height(curH).animate({
+      height: autoH
     }, 2000);
     $dorosli.animate({
       height: "5vh",
