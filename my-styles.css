@@ -36,12 +36,17 @@ body.loading .modal {
 
 /*czcionka, body */
 @font-face {
-    font-family: Ocra;
-    src: url(ocraextended.ttf);
+    font-family: TitilliumWeb;
+    src: url(src/TitilliumWeb-Regular.ttf);
+}
+/*czcionka, menu */
+@font-face {
+  font-family: Ocra;
+  src: url(src/ocraextended.ttf);
 }
 
 body{
-  font-family: Ocra;
+  font-family: TitilliumWeb;
   color: white;
   overflow-x: hidden;
   -webkit-transition: all 0.3s ease;
@@ -73,6 +78,7 @@ body{
 
 /* menu górne */
 #menu{
+  font-family: Ocra;
   background-color: #00000000;
   color: white;
   border-bottom: 1px solid white;
@@ -129,12 +135,13 @@ body{
 }
 
 #sidebar {
+        font-family: Ocra;
         padding-top: 10vh;
         min-width: 250px;
         max-width: 250px;
         margin-right: -240px;
         height: 100vh;
-        animation-duration: 0.5s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-name: toRight;
         display: none;
