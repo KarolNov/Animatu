@@ -224,6 +224,7 @@ function stretchOnClick(){
     $dzieci.children().hide();
     $('#dzieciMenu').css({"display": "block"});
     $('#urodziny').css({"display": "none"});
+    $('#wesela').css({"display": "none"});
     $eventy.children().hide();
     $dorosli.animate({
       height: "90vh"
@@ -253,6 +254,7 @@ function stretchOnClick(){
     $dorosli.children().hide();
     $('#dzieciMenu').css({"display": "block"});
     $('#urodziny').css({"display": "none"});
+    $('#wesela').css({"display": "none"});
     $eventy.animate({
       height: "90vh"
     }, 2000);
@@ -307,10 +309,10 @@ function dzieciClick(){
     $('#dzieciMenu').toggle(1000, ()=>{
       $('#wesela').toggle(1000, ()=>{
         let curH = $('#dzieci').height();
-        // autoH = $('#endUro').position().top - $(document).scrollTop() + $('#endWes').height() + 100;
+        autoH = $('#endWes').position().top - $(document).scrollTop() + $('#endWes').height() + 100;
 
         $('#dzieci').height(curH).animate({
-          height: 300
+          height: autoH
         }, 100);
       });
     });

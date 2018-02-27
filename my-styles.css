@@ -252,6 +252,11 @@ a:active{
   color: white;
   text-align: center;
 }
+
+#uslugi h2{
+  margin-top: 0 !important;
+}
+
 #uslugi span{
   display: inline-block;
   vertical-align: middle;
@@ -280,7 +285,11 @@ a:active{
   font-weight: bold;
 }
 
-#urodziny>div>div{
+#tresc h2, h3, h4{
+  margin-top: 15px;
+}
+
+#tresc>div>div>div{
   height: 200px;
   border: 1px solid white;
 }
@@ -288,12 +297,23 @@ a:active{
 #tresc li{
   display: inline-block;
   line-height: 200%;
-  width: 500px;
+  width: 70vw;
   list-style-type:none;
   background-image:url(src/kolkoAnimatu.png);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: left;
+  position:  relative;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+}
+#tresc li p{
+  line-height: normal;
+  position: relative;
+  left: 0; right: 0;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 #urodziny, #wesela{
