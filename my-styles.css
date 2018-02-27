@@ -248,6 +248,7 @@ a:active{
 }
 
 #uslugi h3{
+  margin-top: 0 !important;
   color: white;
   text-align: center;
 }
@@ -272,13 +273,14 @@ a:active{
 
 #tresc{
   text-align: center;
+  display: none;
 }
 
 #tresc h4{
   font-weight: bold;
 }
 
-#tresc>div>div{
+#urodziny>div>div{
   height: 200px;
   border: 1px solid white;
 }
@@ -292,6 +294,10 @@ a:active{
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: left;
+}
+
+#urodziny, #wesela{
+  display: none;
 }
 .contactForm{
   width: 70%;

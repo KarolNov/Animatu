@@ -43,6 +43,7 @@ $(document).ready(setTimeout(function () {
       //it's not Xmass :(
       $('.navbar').css("background-color", "#009444ff");
     }
+
     $("#logoM").click(()=>{
       if($('#myNavbar').css("display")=="none"){
         $('#myNavbar').slideDown(1000);
@@ -81,6 +82,8 @@ $(document).ready(setTimeout(function () {
 
     //Usługi
     stretchOnClick();
+    //dzieci
+    dzieciClick();
 }, 2000));
 
 function onScroll(event){
@@ -105,18 +108,16 @@ function onScroll(event){
     $('#menu a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (Math.abs(refElement.position().top-scrollPos) <= 100 && Math.abs((refElement.position().top + refElement.height())-scrollPos) > 100) {
-            $('#menu ul a').removeClass("active");
+        if(refElement.position().top < scrollPos && scrollPos < refElement.position().top + refElement.height()){
             currLink.addClass("active");
+        }else{
+          currLink.removeClass("active");
         }
-        else{
-            currLink.removeClass("active");
-        }
+
     });
 
     switch($(".active").attr("href")){
       case "#uslugi":
-        window.location.hash = "#uslugi";
         $('img[src="./src/polygon-zo.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
         $('img[src="./src/polygon-z3.png"]').fadeOut(0);
@@ -127,7 +128,6 @@ function onScroll(event){
         $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
       case "#onas":
-        window.location.hash = "#onas";
         $('img[src="./src/polygon-f.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
         $('img[src="./src/polygon-z3.png"]').fadeOut(0);
@@ -138,7 +138,6 @@ function onScroll(event){
         $('img[src="./src/polygon-n.png"]').fadeIn(500);
         break;
       case "#kontakt":
-        window.location.hash = "#kontakt";
         $('img[src="./src/polygon-n.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
@@ -149,7 +148,6 @@ function onScroll(event){
         $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
       case "#wyjazdy":
-        window.location.hash = "#wyjazdy";
         $('img[src="./src/polygon-p.png"]').fadeOut(0);
         $('img[src="./src/polygon-z1.png"]').fadeOut(0);
         $('img[src="./src/polygon-z2.png"]').fadeOut(0);
@@ -174,36 +172,58 @@ function stretchOnClick(){
   $dorosli = $(dorosli);
   $eventy  = $(eventy);
   $dzieci.click(()=>{
-    $dorosli.children().hide();
-    $eventy.children().hide();
-    var curH  = $dzieci.height(),
-        autoH = $dzieci.css('height', 'auto').height();
+    if($('#tresc').css('display')=="none"){
+      $dorosli.children().hide();
+      $eventy.children().hide();
+      let curH  = $dzieci.height(),
+          autoH = $dzieci.css('height', 'auto').height();
 
-    $dzieci.height(curH).animate({
-      height: autoH
-    }, 2000);
-    $dorosli.animate({
-      height: "5vh",
-      'line-height': "1vh"
-    }, 2000);
-    $eventy.animate({
-      height: "5vh",
-      'line-height': "1vh"
-    }, 2000);
-    $('#dorosli>span').show();
-    $('#dorosli>span>h3').animate({
-      'font-size': '2vh',
-      'margin-top': '5px'
-    }, 0);
-    $('#eventy>span').show();
-    $('#eventy>span>h3').animate({
-      'font-size': '2vh',
-      'margin-top': '5px'
-    }, 0);
-    $('#dzieci>span').hide();
+      $dzieci.height(curH).animate({
+        height: window.innerHeight
+      }, 10);
+      $('#tresc').toggle(2000, function(){
+        if($('#urodziny').css("display")=="none"){
+          $dzieci.height(window.innerHeight).animate({
+            height: window.innerHeight
+          }, 2000);
+        }else{
+          let curH  = $dzieci.height(),
+              autoH = $dzieci.css('height', 'auto').height()+100;
+
+          $dzieci.height(curH).animate({
+            height: autoH
+          }, 2000);
+        }
+      });
+      $dorosli.animate({
+        height: "5vh",
+        'line-height': "1vh"
+      }, 2000);
+      $eventy.animate({
+        height: "5vh",
+        'line-height': "1vh"
+      }, 2000);
+      $('#dorosli>span').show();
+      $('#dorosli>span>h3').animate({
+        'font-size': '2vh',
+        'margin-top': '0'
+      }, 0);
+      $('#eventy>span').show();
+      $('#eventy>span>h3').animate({
+        'font-size': '2vh',
+        'margin-top': '0'
+      }, 0);
+      $('#dzieci>span').toggle();
+      $('#dzieci>span>h3').animate({
+        'font-size': '2vh',
+        'margin-top': '0'
+      }, 0);
+    }
   });
   $dorosli.click(()=>{
     $dzieci.children().hide();
+    $('#dzieciMenu').css({"display": "block"});
+    $('#urodziny').css({"display": "none"});
     $eventy.children().hide();
     $dorosli.animate({
       height: "90vh"
@@ -219,18 +239,20 @@ function stretchOnClick(){
     $('#dzieci>span').show();
     $('#dzieci>span>h3').animate({
       'font-size': '2vh',
-      'margin-top': '5px'
+      'margin-top': '0'
     }, 0);
     $('#eventy>span').show();
     $('#eventy>span>h3').animate({
       'font-size': '2vh',
-      'margin-top': '5px'
+      'margin-top': '0'
     }, 0);
     $('#dorosli>span').hide();
   });
   $eventy.click(()=>{
     $dzieci.children().hide();
     $dorosli.children().hide();
+    $('#dzieciMenu').css({"display": "block"});
+    $('#urodziny').css({"display": "none"});
     $eventy.animate({
       height: "90vh"
     }, 2000);
@@ -245,13 +267,83 @@ function stretchOnClick(){
     $('#dorosli>span').show();
     $('#dorosli>span>h3').animate({
       'font-size': '2vh',
-      'margin-top': '5px'
+      'margin-top': '0'
     }, 0);
     $('#dzieci>span').show();
     $('#dzieci>span>h3').animate({
       'font-size': '2vh',
-      'margin-top': '5px'
+      'margin-top': '0'
     }, 0);
     $('#eventy>span').hide();
+  });
+}
+
+function dzieciClick(){
+  var urodziny = '#uro';
+  $uro = $(urodziny);
+  $uro.click(()=>{
+    let curH = $('#dzieci').height();
+    $('#dzieci').height(curH).animate({
+      height: window.innerHeight
+    }, 100);
+    $('#dzieciMenu').toggle(1000, ()=>{
+      $('#urodziny').toggle(1000, ()=>{
+        let curH = $('#dzieci').height(),
+        autoH = $('#endUro').position().top - $(document).scrollTop() + $('#endUro').height() + 100;
+
+        $('#dzieci').height(curH).animate({
+          height: autoH
+        }, 100);
+      });
+    });
+  });
+  var wesela = '#wes';
+  $wes = $(wesela);
+  $wes.click(()=>{
+    let curH = $('#dzieci').height();
+    $('#dzieci').height(curH).animate({
+      height: window.innerHeight
+    }, 100);
+    $('#dzieciMenu').toggle(1000, ()=>{
+      $('#wesela').toggle(1000, ()=>{
+        let curH = $('#dzieci').height();
+        // autoH = $('#endUro').position().top - $(document).scrollTop() + $('#endWes').height() + 100;
+
+        $('#dzieci').height(curH).animate({
+          height: 300
+        }, 100);
+      });
+    });
+  });
+  slideDMenu();
+}
+
+function slideDMenu(){
+  $(".arrowMenu").click(()=>{
+    let curH = $('#dzieci').height();
+    $('#dzieci').height(curH).animate({
+      height: window.innerHeight
+    }, 100);
+    if($('#urodziny').css("display")=="block"){
+      $('#urodziny').toggle(1000, ()=>{
+        $('#dzieciMenu').toggle(1000, ()=>{
+          let curH = $('#dzieci').height();
+          $('#dzieci').height(curH).animate({
+            height: window.innerHeight
+          }, 100);
+        });
+      });
+    }
+    if($('#wesela').css("display")=="block"){
+      $('#wesela').toggle(1000, ()=>{
+        $('#dzieciMenu').toggle(1000, ()=>{
+          let curH = $('#dzieci').height();
+          $('#dzieci').height(curH).animate({
+            height: window.innerHeight
+          }, 100);
+        });
+      });
+    }
+
   });
 }
