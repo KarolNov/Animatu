@@ -320,7 +320,7 @@ a:active{
   max-width: 400px;
 }
 
-#urodziny, #wesela, #szkoly{
+#urodziny, #wesela, #szkoly, #hotele{
   display: none;
 }
 
@@ -348,7 +348,7 @@ a:active{
 
 }
 
-@media (min-width: 576px){
+@media (min-width: 768px){
   #uro{
     height: 99.9vh;
     border: 3px dashed white;
@@ -371,7 +371,7 @@ a:active{
   }
 }
 
-@media(max-width: 575px){
+@media(max-width: 767px){
   #uro{
     height: 25vh;
     border: 3px dashed white;

@@ -188,7 +188,7 @@ function stretchOnClick(){
           }, 2000);
         }else{
           let curH  = $dzieci.height(),
-              autoH = $dzieci.css('height', 'auto').height()+100;
+              autoH = $dzieci.css('height', 'auto').height()+50;
 
           $dzieci.height(curH).animate({
             height: autoH
@@ -346,6 +346,24 @@ function dzieciClick(){
       });
     });
   });
+  var hotele = '#hot';
+  $hot = $(hotele);
+  $hot.click(()=>{
+    let curH = $('#dzieci').height();
+    $('#dzieci').height(curH).animate({
+      height: window.innerHeight
+    }, 100);
+    $('#dzieciMenu').toggle(1000, ()=>{
+      $('#hotele').toggle(1000, ()=>{
+        let curH = $('#dzieci').height();
+        autoH = $('#endHot').position().top - $(document).scrollTop() + $('#endHot').height() + window.innerHeight/8;
+
+        $('#dzieci').height(curH).animate({
+          height: autoH
+        }, 100);
+      });
+    });
+  });
   slideDMenu();
 }
 
@@ -377,6 +395,16 @@ function slideDMenu(){
     }
     if($('#szkoly').css("display")=="block"){
       $('#szkoly').toggle(1000, ()=>{
+        $('#dzieciMenu').toggle(1000, ()=>{
+          let curH = $('#dzieci').height();
+          $('#dzieci').height(curH).animate({
+            height: window.innerHeight
+          }, 100);
+        });
+      });
+    }
+    if($('#hotele').css("display")=="block"){
+      $('#hotele').toggle(1000, ()=>{
         $('#dzieciMenu').toggle(1000, ()=>{
           let curH = $('#dzieci').height();
           $('#dzieci').height(curH).animate({
