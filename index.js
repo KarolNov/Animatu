@@ -225,6 +225,7 @@ function stretchOnClick(){
     $('#dzieciMenu').css({"display": "block"});
     $('#urodziny').css({"display": "none"});
     $('#wesela').css({"display": "none"});
+    $('#szkoly').css({"display": "none"});
     $eventy.children().hide();
     $dorosli.animate({
       height: "90vh"
@@ -255,6 +256,7 @@ function stretchOnClick(){
     $('#dzieciMenu').css({"display": "block"});
     $('#urodziny').css({"display": "none"});
     $('#wesela').css({"display": "none"});
+    $('#szkoly').css({"display": "none"});
     $eventy.animate({
       height: "90vh"
     }, 2000);
@@ -317,6 +319,33 @@ function dzieciClick(){
       });
     });
   });
+  var szkoly = '#szk';
+  $szk = $(szkoly);
+  $szk.click(()=>{
+    let curH = $('#dzieci').height();
+    $('#dzieci').height(curH).animate({
+      height: window.innerHeight
+    }, 100);
+    $('#dzieciMenu').toggle(1000, ()=>{
+      $('#szkoly').toggle(1000, ()=>{
+        //wyrównywanie wys kolumn w tabeli w ofercie dla szkół
+        let h = $("#targetH").height();
+        let style = "height: "+h;
+        $(".calcH").attr("style", style);
+        setTimeout(()=>{
+          $(".calcH").each(function(){
+            $(this).height(h);
+          });
+        }, 100);
+        let curH = $('#dzieci').height();
+        autoH = $('#endSzk').position().top - $(document).scrollTop() + $('#endSzk').height() + 200;
+
+        $('#dzieci').height(curH).animate({
+          height: autoH
+        }, 100);
+      });
+    });
+  });
   slideDMenu();
 }
 
@@ -346,6 +375,15 @@ function slideDMenu(){
         });
       });
     }
-
+    if($('#szkoly').css("display")=="block"){
+      $('#szkoly').toggle(1000, ()=>{
+        $('#dzieciMenu').toggle(1000, ()=>{
+          let curH = $('#dzieci').height();
+          $('#dzieci').height(curH).animate({
+            height: window.innerHeight
+          }, 100);
+        });
+      });
+    }
   });
 }

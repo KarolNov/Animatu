@@ -248,13 +248,13 @@ a:active{
 }
 
 #uslugi h3{
-  margin-top: 0 !important;
+  margin-top: 0;
   color: white;
   text-align: center;
 }
 
 #uslugi h2{
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 #uslugi span{
@@ -286,7 +286,7 @@ a:active{
 }
 
 #tresc h2, h3, h4{
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #tresc>div>div>div{
@@ -304,9 +304,10 @@ a:active{
   background-size: 25px;
   background-position: left;
   position:  relative;
-  left: 0;
+  left: -25px;
   right: 0;
   margin: 10px auto;
+  padding-left: 25px;
 }
 #tresc li p{
   line-height: normal;
@@ -316,9 +317,77 @@ a:active{
   max-width: 400px;
 }
 
-#urodziny, #wesela{
+#urodziny, #wesela, #szkoly{
   display: none;
 }
+
+.calcH li, .mobileOfertaSzkoly li{
+  width: inherit !important;
+  padding-left: 40px;
+  padding-right: 15px;
+  left: 0 !important;
+}
+
+.calcH ul, .mobileOfertaSzkoly ul{
+  padding-left: 0;
+}
+
+.mobileOfertaSzkoly{
+  height: auto !important;
+}
+#targetH, .calcH{
+  height: auto !important;
+  min-height: 350px !important;
+}
+
+#dzieciMenu{
+  cursor: pointer;
+
+}
+
+@media (min-width: 576px){
+  #uro{
+    height: 99.9vh;
+    border: 3px dashed white;
+    border-right: none;
+  }
+  #wes{
+    height: 33.3vh;
+    border: 3px dashed white;
+  }
+
+  #szk{
+    height: 33.3vh;
+    border-left: 3px dashed white;
+    border-right: 3px dashed white;
+  }
+
+  #hot{
+    height: 33.3vh;
+    border: 3px dashed white;
+  }
+}
+
+@media(max-width: 575px){
+  #uro{
+    height: 25vh;
+    border: 3px dashed white;
+  }
+
+  #szk, #wes{
+    height: 25vh;
+    border: 3px dashed white;
+    border-top: none;
+  }
+
+  #hot{
+    height: 25vh;
+    border: 3px dashed white;
+    border-top: none;
+  }
+}
+
+
 .contactForm{
   width: 70%;
   margin: 0 auto;
