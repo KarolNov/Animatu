@@ -96,7 +96,10 @@ body{
 @media (max-width: 920px) {
   .navbar h3{
       font-size: 20px;
-      margin-top: 30px;
+      left: 0;
+      right: 0;
+      width: 50vw;
+      margin: 30px 25vw 0 25vw;
   }
 }
 
@@ -290,7 +293,7 @@ a:active{
 }
 
 #tresc>div>div>div{
-  height: 200px;
+  min-height: 200px;
   border: 1px solid white;
 }
 

@@ -293,7 +293,7 @@ function dzieciClick(){
     $('#dzieciMenu').toggle(1000, ()=>{
       $('#urodziny').toggle(1000, ()=>{
         let curH = $('#dzieci').height(),
-        autoH = $('#endUro').position().top - $(document).scrollTop() + $('#endUro').height() + 100;
+        autoH = $('#endUro').position().top - $(document).scrollTop() + $('#endUro').height() + window.innerHeight/8;
 
         $('#dzieci').height(curH).animate({
           height: autoH
@@ -311,7 +311,7 @@ function dzieciClick(){
     $('#dzieciMenu').toggle(1000, ()=>{
       $('#wesela').toggle(1000, ()=>{
         let curH = $('#dzieci').height();
-        autoH = $('#endWes').position().top - $(document).scrollTop() + $('#endWes').height() + 100;
+        autoH = $('#endWes').position().top - $(document).scrollTop() + $('#endWes').height() + window.innerHeight/8;
 
         $('#dzieci').height(curH).animate({
           height: autoH
@@ -338,7 +338,7 @@ function dzieciClick(){
           });
         }, 100);
         let curH = $('#dzieci').height();
-        autoH = $('#endSzk').position().top - $(document).scrollTop() + $('#endSzk').height() + 200;
+        autoH = $('#endSzk').position().top - $(document).scrollTop() + $('#endSzk').height() + window.innerHeight/8;
 
         $('#dzieci').height(curH).animate({
           height: autoH
