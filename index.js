@@ -158,9 +158,91 @@ function onScroll(event){
         $('img[src="./src/polygon-f.png"]').fadeIn(500);
         break;
       default:
-
     }
 
+    //animacja ikon Urodziny
+
+    $("#indianie").hover(()=>{
+      //mouse in
+      $("#indianie .firstIconUro").hide();
+      $("#indianie .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#indianie .firstIconUro").show();
+      $("#indianie .secondIconUro").hide();
+    });
+    $("#survival").hover(()=>{
+      //mouse in
+      $("#survival .firstIconUro").hide();
+      $("#survival .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#survival .firstIconUro").show();
+      $("#survival .secondIconUro").hide();
+    });
+    $("#mapa").hover(()=>{
+      //mouse in
+      $("#mapa .firstIconUro").hide();
+      $("#mapa .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#mapa .firstIconUro").show();
+      $("#mapa .secondIconUro").hide();
+    });
+    $("#damy").hover(()=>{
+      //mouse in
+      $("#damy .firstIconUro").hide();
+      $("#damy .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#damy .firstIconUro").show();
+      $("#damy .secondIconUro").hide();
+    });
+    $("#sixteen").hover(()=>{
+      //mouse in
+      $("#sixteen .firstIconUro").hide();
+      $("#sixteen .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#sixteen .firstIconUro").show();
+      $("#sixteen .secondIconUro").hide();
+    });
+    $("#cyrk").hover(()=>{
+      //mouse in
+      $("#cyrk .firstIconUro").hide();
+      $("#cyrk .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#cyrk .firstIconUro").show();
+      $("#cyrk .secondIconUro").hide();
+    });
+    $("#piraci").hover(()=>{
+      //mouse in
+      $("#piraci .firstIconUro").hide();
+      $("#piraci .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#piraci .firstIconUro").show();
+      $("#piraci .secondIconUro").hide();
+    });
+    $("#bajka").hover(()=>{
+      //mouse in
+      $("#bajka .firstIconUro").hide();
+      $("#bajka .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#bajka .firstIconUro").show();
+      $("#bajka .secondIconUro").hide();
+    });
+    $("#chemia").hover(()=>{
+      //mouse in
+      $("#chemia .firstIconUro").hide();
+      $("#chemia .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#chemia .firstIconUro").show();
+      $("#chemia .secondIconUro").hide();
+    });
 }
 
 //funkcja rozciągająca target na 90 vh, a zmniejszająca pozostałe 2 elementy na 5vh
@@ -197,11 +279,13 @@ function stretchOnClick(){
       });
       $dorosli.animate({
         height: "5vh",
-        'line-height': "1vh"
+        'line-height': "1vh",
+        paddingTop: "0"
       }, 2000);
       $eventy.animate({
         height: "5vh",
-        'line-height': "1vh"
+        'line-height': "1vh",
+        paddingTop: "0"
       }, 2000);
       $('#dorosli>span').show();
       $('#dorosli>span>h3').animate({
@@ -228,15 +312,18 @@ function stretchOnClick(){
     $('#szkoly').css({"display": "none"});
     $eventy.children().hide();
     $dorosli.animate({
-      height: "90vh"
+      height: "90vh",
+      paddingTop: "30px"
     }, 2000);
+    $('#dorosli h2').attr("style", "display: block; text-align: center;");
     $dzieci.animate({
       height: "5vh",
       'line-height': "1vh"
     }, 2000);
     $eventy.animate({
       height: "5vh",
-      'line-height': "1vh"
+      'line-height': "1vh",
+      paddingTop: "0"
     }, 2000);
     $('#dzieci>span').show();
     $('#dzieci>span>h3').animate({
@@ -258,11 +345,14 @@ function stretchOnClick(){
     $('#wesela').css({"display": "none"});
     $('#szkoly').css({"display": "none"});
     $eventy.animate({
-      height: "90vh"
+      height: "90vh",
+      paddingTop: "30px"
     }, 2000);
+    $('#eventy h2').attr("style", "display: block; text-align: center;");
     $dorosli.animate({
       height: "5vh",
-      'line-height': "1vh"
+      'line-height': "1vh",
+      paddingTop: "0"
     }, 2000);
     $dzieci.animate({
       height: "5vh",

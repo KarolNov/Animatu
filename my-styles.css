@@ -22,6 +22,11 @@ Kolory Animatu w przestrzeni RGBA
                 no-repeat;
 }
 
+html{
+  position: relative;
+  min-height: 100%;
+}
+
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
 body.loading {
@@ -53,6 +58,7 @@ body{
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-bottom: 50px;
 }
 
 .arrow-bot{
@@ -293,11 +299,11 @@ a:active{
 }
 
 #tresc>div>div>div{
-  min-height: 200px;
+  min-height: 330px;
   border: 1px solid white;
 }
 
-#tresc li{
+#tresc li, #kontakt li{
   display: inline-block;
   line-height: 200%;
   width: 70vw;
@@ -312,6 +318,11 @@ a:active{
   margin: 10px auto;
   padding-left: 25px;
 }
+
+#kontakt li{
+  width: 300px !important;
+}
+
 #tresc li p{
   line-height: normal;
   position: relative;
@@ -321,6 +332,17 @@ a:active{
 }
 
 #urodziny, #wesela, #szkoly, #hotele{
+  display: none;
+}
+
+.firstIconUro{
+  width: 35%;
+  min-width: 130px;
+}
+
+.secondIconUro{
+  width: 35%;
+  min-width: 130px;
   display: none;
 }
 
@@ -401,4 +423,13 @@ a:active{
   right: 0;
   margin: auto;
   width: 50vw;
+}
+
+.foot{
+  height: auto;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  background-color: darkgrey;
+  position: sticky;
+  bottom: 0;
 }
