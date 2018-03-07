@@ -160,87 +160,144 @@ function onScroll(event){
       default:
     }
 
-    //animacja ikon Urodziny
-    $(".indianie").hover(()=>{
+    //animacja ikon Urodziny i Wesela
+    $("#indianieW").hover(()=>{
+        //mouse in
+        $("#indianieW .firstIconUro").hide();
+        $("#indianieW .secondIconUro").show();
+      }, ()=>{
+        //mouse out
+        $("#indianieW .firstIconUro").show();
+        $("#indianieW .secondIconUro").hide();
+      }
+    );
+    $("#indianieU").hover(()=>{
+        //mouse in
+        $("#indianieU .firstIconUro").hide();
+        $("#indianieU .secondIconUro").show();
+      }, ()=>{
+        //mouse out
+        $("#indianieU .firstIconUro").show();
+        $("#indianieU .secondIconUro").hide();
+      }
+    );
+
+    $("#survival").hover(()=>{
       //mouse in
-      $(".indianie .firstIconUro").hide();
-      $(".indianie .secondIconUro").show();
+      $("#survival .firstIconUro").hide();
+      $("#survival .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".indianie .firstIconUro").show();
-      $(".indianie .secondIconUro").hide();
+      $("#survival .firstIconUro").show();
+      $("#survival .secondIconUro").hide();
     });
-    $(".survival").hover(()=>{
+    $("#mapaU").hover(()=>{
       //mouse in
-      $(".survival .firstIconUro").hide();
-      $(".survival .secondIconUro").show();
+      $("#mapaU .firstIconUro").hide();
+      $("#mapaU .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".survival .firstIconUro").show();
-      $(".survival .secondIconUro").hide();
+      $("#mapaU .firstIconUro").show();
+      $("#mapaU .secondIconUro").hide();
     });
-    $(".mapa").hover(()=>{
+    $("#mapaW").hover(()=>{
       //mouse in
-      $(".mapa .firstIconUro").hide();
-      $(".mapa .secondIconUro").show();
+      $("#mapaW .firstIconUro").hide();
+      $("#mapaW .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".mapa .firstIconUro").show();
-      $(".mapa .secondIconUro").hide();
+      $("#mapaW .firstIconUro").show();
+      $("#mapaW .secondIconUro").hide();
     });
-    $(".damy").hover(()=>{
+    $("#damyU").hover(()=>{
       //mouse in
-      $(".damy .firstIconUro").hide();
-      $(".damy .secondIconUro").show();
+      $("#damyU .firstIconUro").hide();
+      $("#damyU .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".damy .firstIconUro").show();
-      $(".damy .secondIconUro").hide();
+      $("#damyU .firstIconUro").show();
+      $("#damyU .secondIconUro").hide();
     });
-    $(".sixteen").hover(()=>{
+    $("#damyW").hover(()=>{
       //mouse in
-      $(".sixteen .firstIconUro").hide();
-      $(".sixteen .secondIconUro").show();
+      $("#damyW .firstIconUro").hide();
+      $("#damyW .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".sixteen .firstIconUro").show();
-      $(".sixteen .secondIconUro").hide();
+      $("#damyW .firstIconUro").show();
+      $("#damyW .secondIconUro").hide();
     });
-    $(".cyrk").hover(()=>{
+    $("#sixteen").hover(()=>{
       //mouse in
-      $(".cyrk .firstIconUro").hide();
-      $(".cyrk .secondIconUro").show();
+      $("#sixteen .firstIconUro").hide();
+      $("#sixteen .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".cyrk .firstIconUro").show();
-      $(".cyrk .secondIconUro").hide();
+      $("#sixteen .firstIconUro").show();
+      $("#sixteen .secondIconUro").hide();
     });
-    $(".piraci").hover(()=>{
+    $("#cyrkU").hover(()=>{
+      $("#cyrkU .firstIconUro").hide();
+      $("#cyrkU .secondIconUro").show();
       //mouse in
-      $(".piraci .firstIconUro").hide();
-      $(".piraci .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".piraci .firstIconUro").show();
-      $(".piraci .secondIconUro").hide();
+      $("#cyrkU .firstIconUro").show();
+      $("#cyrkU .secondIconUro").hide();
     });
-    $(".bajka").hover(()=>{
+    $("#cyrkW").hover(()=>{
+      $("#cyrkW .firstIconUro").hide();
+      $("#cyrkW .secondIconUro").show();
       //mouse in
-      $(".bajka .firstIconUro").hide();
-      $(".bajka .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".bajka .firstIconUro").show();
-      $(".bajka .secondIconUro").hide();
+      $("#cyrkW .firstIconUro").show();
+      $("#cyrkW .secondIconUro").hide();
     });
-    $(".chemia").hover(()=>{
+    $("#piraciU").hover(()=>{
       //mouse in
-      $(".chemia .firstIconUro").hide();
-      $(".chemia .secondIconUro").show();
+      $("#piraciU .firstIconUro").hide();
+      $("#piraciU .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $(".chemia .firstIconUro").show();
-      $(".chemia .secondIconUro").hide();
+      $("#piraciU .firstIconUro").show();
+      $("#piraciU .secondIconUro").hide();
+    });
+    $("#piraciW").hover(()=>{
+      //mouse in
+      $("#piraciW .firstIconUro").hide();
+      $("#piraciW .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#piraciW .firstIconUro").show();
+      $("#piraciW .secondIconUro").hide();
+    });
+    $("#bajkaU").hover(()=>{
+      //mouse in
+      $("#bajkaU .firstIconUro").hide();
+      $("#bajkaU .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#bajkaU .firstIconUro").show();
+      $("#bajkaU .secondIconUro").hide();
+    });
+    $("#bajkaW").hover(()=>{
+      //mouse in
+      $("#bajkaW .firstIconUro").hide();
+      $("#bajkaW .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#bajkaW .firstIconUro").show();
+      $("#bajkaW .secondIconUro").hide();
+    });
+    $("#chemia").hover(()=>{
+      //mouse in
+      $("#chemia .firstIconUro").hide();
+      $("#chemia .secondIconUro").show();
+    }, ()=>{
+      //mouse out
+      $("#chemia .firstIconUro").show();
+      $("#chemia .secondIconUro").hide();
     });
 }
 
