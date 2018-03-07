@@ -19,7 +19,7 @@
     <script src="index.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.3/vivus.min.js"></script>
   </head>
-  <body class="loading">
+  <body class="loading" style="margin-bottom: 0;">
       <!-- Menu dla dużych i średnich wyświetlaczy -->
     <div class="hidden-xs">
       <!-- Navbar górny -->
@@ -91,7 +91,7 @@
     <!-- Strona startowa -->
     <div style="margin-top: auto; width: 100vw; padding: 0; background-color: #ffffff"   id="top">
       <!-- zdjęcia dla większych urządzeń -->
-      <div class="hidden-xs"><img src="./src/firstimg.jpg"  class="firstImg"> </img></div>
+      <div class="hidden-xs"><img src="./src/firstImg.jpg"  class="firstImg"> </img></div>
       <!-- zdjęcie dla telefonów -->
       <div class="hidden-lg hidden-md hidden-sm"><img src="./src/firstimgMob.jpg"  class="firstImg"> </img></div>
       <a href="#onas"> <img src="src/arrow.png" class="arrow-bot"> </img> </a>
@@ -107,13 +107,15 @@
             Wszyscy nasi animatorzy swoje doświadczenia czerpią z harcerskiej pracy, jednocześnie mamy w swoich szeregach instruktorów,
             pedagogów oraz specjalistów do spraw organizacji.
           </h4>
-          <img src="src/magda.jpg" style="border-radius: 50%; width: 200px;"> </img>
           <h2> Madzia Szwarcbach </h2>
-          <h4>
-          Założycielka firmy animacyjnej Animatu, z wykształcenia pedagog przedszkolny i wczesnoszkolny.
-          Instruktor ZHP, działa głownie w pionie zuchowym. Animacją czasu dla dzieci zajmuje się od 3 lat.
-          Prywatnie miłośniczka psów, zwłaszcza springerów, w wolnych chwilach lubi przemeblowywać mieszkanie.
-        </h4>
+          <div>
+            <img src="src/magda.jpg" style="border-radius: 50%; width: 200px;"> </img>
+            <h4>
+            Założycielka firmy animacyjnej Animatu, z wykształcenia pedagog przedszkolny i wczesnoszkolny.
+            Instruktor ZHP, działa głownie w pionie zuchowym. Animacją czasu dla dzieci zajmuje się od 3 lat.
+            Prywatnie miłośniczka psów, zwłaszcza springerów, w wolnych chwilach lubi przemeblowywać mieszkanie.
+            </h4>
+          </div>
           <img src="src/martyna.png" style="border-radius: 50%; width: 200px;"> </img>
           <h2> Martyna Mamcarczyk-Stopka </h2>
           <h4>
@@ -182,7 +184,7 @@
                 </h3>
                 <!-- Tematy urodzin -->
                 <div class="row-fluid">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="indianie">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .indianie">
                       <h4> Indiańska wioska </h4>
                       <img src="src/piktogramy/indianie_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/indianie_2.png" class="secondIconUro"> </img>
@@ -192,7 +194,7 @@
                       Legendy plemienne
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="survival">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .survival">
                       <h4 style="color: #f47e57ff;"> SurvivaLOVE </h4>
                       <img src="src/piktogramy/surviva_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/surviva_2.png" class="secondIconUro"> </img>
@@ -202,7 +204,7 @@
                       Zabawy z kompasem i mapą
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="mapa">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .mapa">
                       <h4> Palcem po mapie </h4>
                       <img src="src/piktogramy/mapa_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/mapa_2.png" class="secondIconUro"> </img>
@@ -212,7 +214,7 @@
                       Tworzenie ogromnej mapy
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="damy">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .damy">
                       <h4> Damy i rycerze </h4>
                       <img src="src/piktogramy/damy_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/damy_2.png" class="secondIconUro"> </img>
@@ -223,7 +225,7 @@
                       Zawody rycerskie
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="sixteen">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .sixteen">
                       <h4 style="color: #f47e57ff;"> Sweet sixteen </h4>
                       <img src="src/piktogramy/sixteen_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/sixteen_2.png" class="secondIconUro"> </img>
@@ -234,7 +236,7 @@
                       Kolorowe warkoczyki
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="cyrk">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .cyrk">
                       <h4 style="color: #f47e57ff;"> Cyrk na kółkach </h4>
                       <img src="src/piktogramy/cyrk_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/cyrk_2.png" class="secondIconUro"> </img>
@@ -243,7 +245,7 @@
                       Zabawy żonglerskie
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="piraci">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .piraci">
                       <h4> Piracka przygoda </h4>
                       <img src="src/piktogramy/sixteen_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/sixteen_2.png" class="secondIconUro"> </img>
@@ -253,7 +255,7 @@
                       Pirackie przyśpiewki
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="bajka">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .bajka">
                       <h4> Bajkowa kraina </h4>
                       <img src="src/piktogramy/bajki_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/bajki_2.png" class="secondIconUro"> </img>
@@ -262,7 +264,7 @@
                       w towarzystwie swoich ulubionych postaci
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="chemia">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .chemia">
                       <h4 style="color: #f47e57ff;"> Chemia od kuchnii </h4>
                       <img src="src/piktogramy/chemia_1.png" class="firstIconUro"> </img>
                       <img src="src/piktogramy/chemia_2.png" class="secondIconUro"> </img>
@@ -325,40 +327,64 @@
                 <h3>Tematy animacji do wyboru</h3>
                 <!-- Tematy urodzin -->
                 <div class="row-fluid">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .indianie">
                       <h4> Indiańska wioska </h4>
+                      <img src="src/piktogramy/indianie_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/indianie_2.png" class="secondIconUro"> </img>
+                      <div>
                       Indiańskie podchody </br>
                       Zdobywanie pióropuszy </br>
                       Legendy plemienne
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .mapa">
                       <h4> Palcem po mapie </h4>
+                      <img src="src/piktogramy/mapa_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/mapa_2.png" class="secondIconUro"> </img>
+                      <div>
                       Czy da się zwiedzić cały świat w dwie godziny! Oczywiście :D </br>
                       Zabawy z najdalszych zakamarków świata </br>
                       Tworzenie ogromnej mapy
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .damy">
                       <h4> Damy i rycerze </h4>
+                      <img src="src/piktogramy/damy_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/damy_2.png" class="secondIconUro"> </img>
+                      <div>
                       Zabawa w iście królewskim stylu: </br>
                       Tańce średniowieczne </br>
                       Tworzenie królewskiej biżuterii </br>
                       Zawody rycerskie
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .cyrk">
                       <h4> Cyrk na kółkach </h4>
+                      <img src="src/piktogramy/cyrk_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/cyrk_2.png" class="secondIconUro"> </img>
+                      <div>
                       Warsztaty modelowania balonów </br>
                       Zabawy żonglerskie
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .piraci">
                       <h4> Piracka przygoda </h4>
+                      <img src="src/piktogramy/piraci_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/piraci_2.png" class="secondIconUro"> </img>
+                      <div>
                       Poszukiwanie zaginionego skarbu </br>
                       Tworzenie ogromnego statku pirackiego </br>
                       Pirackie przyśpiewki
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 .bajka">
                       <h4> Bajkowa kraina </h4>
+                      <img src="src/piktogramy/bajki_1.png" class="firstIconUro"> </img>
+                      <img src="src/piktogramy/bajki_2.png" class="secondIconUro"> </img>
+                      <div>
                       Niesamowita podróż po świecie bajek </br>
                       w towarzystwie swoich ulubionych postaci
+                      </div>
                     </div>
                   </div>
                   <!-- koniec tematów -->

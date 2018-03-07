@@ -161,87 +161,86 @@ function onScroll(event){
     }
 
     //animacja ikon Urodziny
-
-    $("#indianie").hover(()=>{
+    $(".indianie").hover(()=>{
       //mouse in
-      $("#indianie .firstIconUro").hide();
-      $("#indianie .secondIconUro").show();
+      $(".indianie .firstIconUro").hide();
+      $(".indianie .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#indianie .firstIconUro").show();
-      $("#indianie .secondIconUro").hide();
+      $(".indianie .firstIconUro").show();
+      $(".indianie .secondIconUro").hide();
     });
-    $("#survival").hover(()=>{
+    $(".survival").hover(()=>{
       //mouse in
-      $("#survival .firstIconUro").hide();
-      $("#survival .secondIconUro").show();
+      $(".survival .firstIconUro").hide();
+      $(".survival .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#survival .firstIconUro").show();
-      $("#survival .secondIconUro").hide();
+      $(".survival .firstIconUro").show();
+      $(".survival .secondIconUro").hide();
     });
-    $("#mapa").hover(()=>{
+    $(".mapa").hover(()=>{
       //mouse in
-      $("#mapa .firstIconUro").hide();
-      $("#mapa .secondIconUro").show();
+      $(".mapa .firstIconUro").hide();
+      $(".mapa .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#mapa .firstIconUro").show();
-      $("#mapa .secondIconUro").hide();
+      $(".mapa .firstIconUro").show();
+      $(".mapa .secondIconUro").hide();
     });
-    $("#damy").hover(()=>{
+    $(".damy").hover(()=>{
       //mouse in
-      $("#damy .firstIconUro").hide();
-      $("#damy .secondIconUro").show();
+      $(".damy .firstIconUro").hide();
+      $(".damy .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#damy .firstIconUro").show();
-      $("#damy .secondIconUro").hide();
+      $(".damy .firstIconUro").show();
+      $(".damy .secondIconUro").hide();
     });
-    $("#sixteen").hover(()=>{
+    $(".sixteen").hover(()=>{
       //mouse in
-      $("#sixteen .firstIconUro").hide();
-      $("#sixteen .secondIconUro").show();
+      $(".sixteen .firstIconUro").hide();
+      $(".sixteen .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#sixteen .firstIconUro").show();
-      $("#sixteen .secondIconUro").hide();
+      $(".sixteen .firstIconUro").show();
+      $(".sixteen .secondIconUro").hide();
     });
-    $("#cyrk").hover(()=>{
+    $(".cyrk").hover(()=>{
       //mouse in
-      $("#cyrk .firstIconUro").hide();
-      $("#cyrk .secondIconUro").show();
+      $(".cyrk .firstIconUro").hide();
+      $(".cyrk .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#cyrk .firstIconUro").show();
-      $("#cyrk .secondIconUro").hide();
+      $(".cyrk .firstIconUro").show();
+      $(".cyrk .secondIconUro").hide();
     });
-    $("#piraci").hover(()=>{
+    $(".piraci").hover(()=>{
       //mouse in
-      $("#piraci .firstIconUro").hide();
-      $("#piraci .secondIconUro").show();
+      $(".piraci .firstIconUro").hide();
+      $(".piraci .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#piraci .firstIconUro").show();
-      $("#piraci .secondIconUro").hide();
+      $(".piraci .firstIconUro").show();
+      $(".piraci .secondIconUro").hide();
     });
-    $("#bajka").hover(()=>{
+    $(".bajka").hover(()=>{
       //mouse in
-      $("#bajka .firstIconUro").hide();
-      $("#bajka .secondIconUro").show();
+      $(".bajka .firstIconUro").hide();
+      $(".bajka .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#bajka .firstIconUro").show();
-      $("#bajka .secondIconUro").hide();
+      $(".bajka .firstIconUro").show();
+      $(".bajka .secondIconUro").hide();
     });
-    $("#chemia").hover(()=>{
+    $(".chemia").hover(()=>{
       //mouse in
-      $("#chemia .firstIconUro").hide();
-      $("#chemia .secondIconUro").show();
+      $(".chemia .firstIconUro").hide();
+      $(".chemia .secondIconUro").show();
     }, ()=>{
       //mouse out
-      $("#chemia .firstIconUro").show();
-      $("#chemia .secondIconUro").hide();
+      $(".chemia .firstIconUro").show();
+      $(".chemia .secondIconUro").hide();
     });
 }
 
