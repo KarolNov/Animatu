@@ -8,9 +8,21 @@
 //      ajaxStop: function() { $body.removeClass("loading"); }
 // });
 
+$("body").ready(()=>{
+  setTimeout(()=>{$('#load').fadeOut(300);
+  console.log("ready");}, 200);
+});
+
 $(document).ready(setTimeout(function () {
     //welcome screen
-    $("body").removeClass("loading");
+
+    var image = $(".firstImg");
+    var downloadingImage = new Image();
+    downloadingImage.onload = function(){
+        image.src = this.src;
+    };
+    downloadingImage.src = "src/firstImg.jpg";
+
     if($(window).width()<920){
         $("#mMenu").fadeIn(3000);
         $("#menu").fadeOut(3000);
@@ -27,6 +39,9 @@ $(document).ready(setTimeout(function () {
           $("#menu").fadeIn(3000);
         }
     });
+
+    //photo sliders
+  $('.slider').slick();
 
     //scroll event
     $(document).on("scroll", onScroll);
@@ -372,6 +387,7 @@ function stretchOnClick(){
       paddingTop: "30px"
     }, 2000);
     $('#dorosli h2').attr("style", "display: block; text-align: center;");
+    $('#dorosli img').attr("style", "display: block;");
     $dzieci.animate({
       height: "5vh",
       'line-height': "1vh"
