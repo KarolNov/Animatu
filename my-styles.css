@@ -328,21 +328,20 @@ a:active{
 }
 
 .minH330>div{
-  min-height: 390px;
+  height: 30vh;
   border: 1px solid white;
+  padding-top: 30px;
 }
 
 #tresc li, #kontakt li{
-  display: inline-block;
   line-height: 200%;
-  width: 70vw;
+  width: 30vw;
   list-style-type:none;
   background-image:url(src/kolkoAnimatu.png);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: left;
-  position:  relative;
-  left: -25px;
+  left: 0;
   right: 0;
   margin: 10px auto;
   padding-left: 25px;
@@ -354,10 +353,8 @@ a:active{
 
 #tresc li p{
   line-height: normal;
-  position: relative;
-  left: 0; right: 0;
-  margin: 0 auto;
-  max-width: 400px;
+  text-align: left;
+  padding-left: 25px;
 }
 
 #urodziny, #wesela, #szkoly, #hotele{
@@ -371,15 +368,16 @@ a:active{
   text-align: center;
 }
 
-.firstIconUro{
-  width: 35%;
+.iconUro{
+  height: 80%;
   min-width: 130px;
 }
-
-.secondIconUro{
-  width: 35%;
-  min-width: 130px;
+.znikajacyTekst{
   display: none;
+  margin-top: 30px;
+}
+.znikajacyTekst h4{
+  line-height:200%;
 }
 
 .ofertaSzkoly>div{

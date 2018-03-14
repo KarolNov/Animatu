@@ -10,12 +10,13 @@
 
 $("body").ready(()=>{
   setTimeout(()=>{$('#load').fadeOut(300);
-  console.log("ready");}, 200);
+  console.log("ready");
+  $("body").removeClass("loading");
+  }, 200);
 });
 
 $(document).ready(setTimeout(function () {
     //welcome screen
-
     var image = $(".firstImg");
     var downloadingImage = new Image();
     downloadingImage.onload = function(){
@@ -176,143 +177,203 @@ function onScroll(event){
     }
 
     //animacja ikon Urodziny i Wesela
+    $("#indianieW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#indianieW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#indianieW .iconUro").hide();
+    });
     $("#indianieW").hover(()=>{
         //mouse in
-        $("#indianieW .firstIconUro").hide();
-        $("#indianieW .secondIconUro").show();
+        $("#indianieW .iconUro").attr("src", "src/piktogramy/indianie_2.png");
+
       }, ()=>{
         //mouse out
-        $("#indianieW .firstIconUro").show();
-        $("#indianieW .secondIconUro").hide();
+        $("#indianieW .iconUro").attr("src", "src/piktogramy/indianie_1.png");
       }
     );
+    $("#indianieU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#indianieU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#indianieU .iconUro").hide();
+    });
     $("#indianieU").hover(()=>{
         //mouse in
-        $("#indianieU .firstIconUro").hide();
-        $("#indianieU .secondIconUro").show();
+        $("#indianieU .iconUro").attr("src", "src/piktogramy/indianie_2.png");
       }, ()=>{
         //mouse out
-        $("#indianieU .firstIconUro").show();
-        $("#indianieU .secondIconUro").hide();
+        $("#indianieU .iconUro").attr("src", "src/piktogramy/indianie_1.png");
       }
     );
-
+    $("#survival").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#survival .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#survival .iconUro").hide();
+    });
     $("#survival").hover(()=>{
       //mouse in
-      $("#survival .firstIconUro").hide();
-      $("#survival .secondIconUro").show();
+      $("#survival .iconUro").attr("src", "src/piktogramy/surviva_2.png");
     }, ()=>{
       //mouse out
-      $("#survival .firstIconUro").show();
-      $("#survival .secondIconUro").hide();
+      $("#survival .iconUro").attr("src", "src/piktogramy/surviva_1.png");
+    });
+    $("#mapaU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#mapaU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#mapaU .iconUro").hide();
     });
     $("#mapaU").hover(()=>{
       //mouse in
-      $("#mapaU .firstIconUro").hide();
-      $("#mapaU .secondIconUro").show();
+      $("#mapaU .iconUro").attr("src", "src/piktogramy/mapa_2.png");
     }, ()=>{
       //mouse out
-      $("#mapaU .firstIconUro").show();
-      $("#mapaU .secondIconUro").hide();
+      $("#mapaU .iconUro").attr("src", "src/piktogramy/mapa_1.png");
+    });
+    $("#mapaW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#mapaW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#mapaW .iconUro").hide();
     });
     $("#mapaW").hover(()=>{
       //mouse in
-      $("#mapaW .firstIconUro").hide();
-      $("#mapaW .secondIconUro").show();
+      $("#mapaW .iconUro").attr("src", "src/piktogramy/mapa_2.png");
     }, ()=>{
       //mouse out
-      $("#mapaW .firstIconUro").show();
-      $("#mapaW .secondIconUro").hide();
+      $("#mapaW .iconUro").attr("src", "src/piktogramy/mapa_1.png");
+    });
+    $("#damyU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#damyU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#damyU .iconUro").hide();
     });
     $("#damyU").hover(()=>{
       //mouse in
-      $("#damyU .firstIconUro").hide();
-      $("#damyU .secondIconUro").show();
+      $("#damyU .iconUro").attr("src", "src/piktogramy/damy_2.png");
     }, ()=>{
       //mouse out
-      $("#damyU .firstIconUro").show();
-      $("#damyU .secondIconUro").hide();
+      $("#damyU .iconUro").attr("src", "src/piktogramy/damy_1.png");
+    });
+    $("#damyW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#damyW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#damyW .iconUro").hide();
     });
     $("#damyW").hover(()=>{
       //mouse in
-      $("#damyW .firstIconUro").hide();
-      $("#damyW .secondIconUro").show();
+      $("#damyW .iconUro").attr("src", "src/piktogramy/damy_2.png");
     }, ()=>{
       //mouse out
-      $("#damyW .firstIconUro").show();
-      $("#damyW .secondIconUro").hide();
+      $("#damyW .iconUro").attr("src", "src/piktogramy/damy_1.png");
+    });
+    $("#sixteen").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#sixteen .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#sixteen .iconUro").hide();
     });
     $("#sixteen").hover(()=>{
       //mouse in
-      $("#sixteen .firstIconUro").hide();
-      $("#sixteen .secondIconUro").show();
+      $("#sixteen .iconUro").attr("src", "src/piktogramy/sixteen_2.png");
     }, ()=>{
       //mouse out
-      $("#sixteen .firstIconUro").show();
-      $("#sixteen .secondIconUro").hide();
+      $("#sixteen .iconUro").attr("src", "src/piktogramy/sixteen_1.png");
+    });
+    $("#cyrkU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#cyrkU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#cyrkU .iconUro").hide();
     });
     $("#cyrkU").hover(()=>{
-      $("#cyrkU .firstIconUro").hide();
-      $("#cyrkU .secondIconUro").show();
+      $("#cyrkU .iconUro").attr("src", "src/piktogramy/cyrk_2.png");
       //mouse in
     }, ()=>{
       //mouse out
-      $("#cyrkU .firstIconUro").show();
-      $("#cyrkU .secondIconUro").hide();
+      $("#cyrkU .iconUro").attr("src", "src/piktogramy/cyrk_1.png");
+    });
+    $("#cyrkW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#cyrkW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#cyrkW .iconUro").hide();
     });
     $("#cyrkW").hover(()=>{
-      $("#cyrkW .firstIconUro").hide();
-      $("#cyrkW .secondIconUro").show();
+      $("#cyrkW .iconUro").attr("src", "src/piktogramy/cyrk_2.png");
       //mouse in
     }, ()=>{
       //mouse out
-      $("#cyrkW .firstIconUro").show();
-      $("#cyrkW .secondIconUro").hide();
+      $("#cyrkW .iconUro").attr("src", "src/piktogramy/cyrk_1.png");
+    });
+    $("#piraciU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#piraciU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#piraciU .iconUro").hide();
     });
     $("#piraciU").hover(()=>{
       //mouse in
-      $("#piraciU .firstIconUro").hide();
-      $("#piraciU .secondIconUro").show();
+      $("#piraciU .iconUro").attr("src", "src/piktogramy/piraci_2.png");
     }, ()=>{
       //mouse out
-      $("#piraciU .firstIconUro").show();
-      $("#piraciU .secondIconUro").hide();
+      $("#piraciU .iconUro").attr("src", "src/piktogramy/piraci_1.png");
+    });
+    $("#piraciW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#piraciW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#piraciW .iconUro").hide();
     });
     $("#piraciW").hover(()=>{
       //mouse in
-      $("#piraciW .firstIconUro").hide();
-      $("#piraciW .secondIconUro").show();
+      $("#piraciW .iconUro").attr("src", "src/piktogramy/piraci_2.png");
     }, ()=>{
       //mouse out
-      $("#piraciW .firstIconUro").show();
-      $("#piraciW .secondIconUro").hide();
+      $("#piraciW .iconUro").attr("src", "src/piktogramy/piraci_1.png");
+    });
+    $("#bajkaU").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#bajkaU .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#bajkaU .iconUro").hide();
     });
     $("#bajkaU").hover(()=>{
       //mouse in
-      $("#bajkaU .firstIconUro").hide();
-      $("#bajkaU .secondIconUro").show();
+      $("#bajkaU .iconUro").attr("src", "src/piktogramy/bajki_2.png");
     }, ()=>{
       //mouse out
-      $("#bajkaU .firstIconUro").show();
-      $("#bajkaU .secondIconUro").hide();
+      $("#bajkaU .iconUro").attr("src", "src/piktogramy/bajki_1.png");
+    });
+    $("#bajkaW").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#bajkaW .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#bajkaW .iconUro").hide();
     });
     $("#bajkaW").hover(()=>{
       //mouse in
-      $("#bajkaW .firstIconUro").hide();
-      $("#bajkaW .secondIconUro").show();
+      $("#bajkaW .iconUro").attr("src", "src/piktogramy/bajki_2.png");
     }, ()=>{
       //mouse out
-      $("#bajkaW .firstIconUro").show();
-      $("#bajkaW .secondIconUro").hide();
+      $("#bajkaW .iconUro").attr("src", "src/piktogramy/bajki_1.png");
+    });
+    $("#chemia").click(()=>{
+      $(".znikajacyTekst").hide();
+      $("#chemia .znikajacyTekst").show();
+      $(".iconUro").show();
+      $("#chemia .iconUro").hide();
     });
     $("#chemia").hover(()=>{
       //mouse in
-      $("#chemia .firstIconUro").hide();
-      $("#chemia .secondIconUro").show();
+      $("#chemia .iconUro").attr("src", "src/piktogramy/chemia_2.png");
     }, ()=>{
       //mouse out
-      $("#chemia .firstIconUro").show();
-      $("#chemia .secondIconUro").hide();
+      $("#chemia .iconUro").attr("src", "src/piktogramy/chemia_1.png");
     });
 }
 
