@@ -386,7 +386,7 @@ function stretchOnClick(){
   $dorosli = $(dorosli);
   $eventy  = $(eventy);
   $dzieci.click(()=>{
-    if($('#tresc').css('display')=="none"){
+    if($('#dzieci .tresc').css('display')=="none"){
       $dorosli.children().hide();
       $eventy.children().hide();
       let curH  = $dzieci.height(),
@@ -395,7 +395,7 @@ function stretchOnClick(){
       $dzieci.height(curH).animate({
         height: window.innerHeight
       }, 10);
-      $('#tresc').toggle(2000, function(){
+      $('#dzieci .tresc').toggle(2000, function(){
         if($('#urodziny').css("display")=="none"){
           $dzieci.height(window.innerHeight).animate({
             height: window.innerHeight
@@ -447,8 +447,7 @@ function stretchOnClick(){
       height: "90vh",
       paddingTop: "30px"
     }, 2000);
-    $('#dorosli h2').attr("style", "display: block; text-align: center;");
-    $('#dorosli img').attr("style", "display: block;");
+    $('#dorosli .tresc').attr("style", "display: block");
     $dzieci.animate({
       height: "5vh",
       'line-height': "1vh"

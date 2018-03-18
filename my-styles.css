@@ -268,7 +268,18 @@ a:active{
 .zdjeciezOpisem img{
   border-radius: 50%;
   width: 200px;
-  float: left;
+  /* float: left; */
+}
+
+@media (max-width: 400px){
+  .zdjeciezOpisem span{
+    display: block !important;
+    vertical-align: middle;
+    width: 70vw;
+  }
+  .zdjeciezOpisem h4, .zdjeciezOpisem h2{
+    text-align: center !important;
+  }
 }
 
 .zdjeciezOpisem span{
@@ -314,16 +325,16 @@ a:active{
   to{ border-bottom-width: 2px;;}
 }
 
-#tresc{
+.tresc{
   text-align: center;
   display: none;
 }
 
-#tresc h4{
+.tresc h4{
   font-weight: bold;
 }
 
-#tresc h2, h3, h4{
+.tresc h2, h3, h4{
   margin-top: 20px;
 }
 
@@ -333,7 +344,7 @@ a:active{
   padding-top: 30px;
 }
 
-#tresc li, #kontakt li{
+.tresc li, #kontakt li, #wyjazdy li{
   line-height: 200%;
   width: 30vw;
   list-style-type:none;
@@ -351,7 +362,7 @@ a:active{
   width: 300px !important;
 }
 
-#tresc li p{
+#tresc li p, #wyjazdy li p{
   line-height: normal;
   text-align: left;
   padding-left: 25px;
@@ -486,7 +497,7 @@ a:active{
   }
 }
 
-#dorosli img, #eventy img{
+ #eventy img{
   width: 40vw;
   animation-name: rotateWrench;
   animation-duration: 1.5s;
@@ -495,7 +506,8 @@ a:active{
   transform-origin: 80% 20%;
   display: none;
   position: relative;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   margin: 5vh auto;
 }
 
